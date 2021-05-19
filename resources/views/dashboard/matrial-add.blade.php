@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>advertisement-tabel</title>
+    <title>cladd-add</title>
     <!-- Scripts -->
     <script src="{{ asset('js/dashboard/jquery-1.11.1.min.js') }}" defer></script>
 <script src="{{ asset('js/dashboard/bootstrap.js') }}" defer></script>
@@ -25,149 +25,39 @@
 
 </head>
 <style>
-
     body{
-        font-family: 'Tajawal', sans-serif;
-        padding-bottom:40px ;
-        background-image:linear-gradient( #e6e5f3 50% , #f5f5f5 50%);
+        background-image:linear-gradient(#7685bb 50%,#f5f5f5 50%);
         background-repeat: no-repeat;
         background-size: cover;
-        box-sizing: border-box;
-        /*padding-top: 30px;*/
-        padding-top: 40px;
-      }
-      /* إصلاح خاص بالجدول من أجل الحواف الدائرية بلأعلى */
-      .tan-tabel {
-        margin-top: 2%;
-      }
-         /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - بداية*/
-    /*@media (min-width: 0px) and (max-width: 535px) {
-      .header-part {
-       
-        font-size: 25px;
-        font-weight: bold;
-      }
-      tbody {
-        font-size: 14px;
-        font-weight: 180px;
-      }
-      thead {
-        font-size: 15px;
-        font-weight: 300px;
-      }
-      .foot {
-        width: 45%;
-      }
-      .student-form label {
-        font-size: 15px;
-        font-weight: 300px;
-        margin-right: 8px;
-      }
-      .btn{
-        display: inline;
-      }
-    } 
-    
+        font-family: 'Tajawal', sans-serif;
         
-      @media (min-width: 536px) and (max-width: 800px) {
-      .header-part {
-        font-size: 25px;
-        font-weight: bold;
-      }
-      tbody {
-        font-size: 14px;
-        font-weight: 180px;
-      }
-      thead {
-        font-size: 15px;
-        font-weight: 300px;
-      }
-      .foot {
-        width: 45%;
-      }
-      .student-form label {
-        font-size: 15px;
-        font-weight: 300px;
-        margin-right: 8px;
-      }
-    }*/
-    /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - نهاية*/
-      /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - بداية*/
-      @media (min-width: 0px) and (max-width: 630px) {
-      .header-part {
-        font-size: 25px;
-        font-weight: bold;
-      }
-      tbody {
-        font-size: 14px;
-        font-weight: 180px;
-      }
-      thead {
-        font-size: 15px;
-        font-weight: 300px;
-      }
-      .foot {
-        width: 45%;
-      }
-      .student-form label {
-        font-size: 15px;
-        font-weight: 300px;
-        margin-right: 8px;
-      }
-      .btn{
-        display: inline;
-      }
-    } 
-     
-      @media (min-width: 631px) and (max-width: 1000px) {
-      .header-part {
-        font-size: 25px;
-        font-weight: bold;
-      }
-      tbody {
-        font-size: 14px;
-        font-weight: 180px;
-      }
-      thead {
-        font-size: 15px;
-        font-weight: 300px;
-      }
-      .foot {
-        width: 45%;
-      }
-      .student-form label {
-        font-size: 15px;
-        font-weight: 300px;
-        margin-right: 8px;
-      }
     }
-    /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - نهاية*/
-    
+        
     
     .navbar {
-       /* padding-top: 5px;*/
-       background: #e6e5f3;
-        border: 2px solid #e6e5f3;
+       padding-top: 5px;
+       background: #7685bb;
+        border: 2px solid #7685bb;
+       /* background: #290037;
+        border: 2px solid #290037;*/
         min-height: 40px; 
         margin-bottom: 0px;
-        padding-top: 10px;
+        padding-bottom: 20px;
     }
     
     
     .navbar-inverse .navbar-nav > li > a{
-      /*color: #4938df;*/
-      color: #488fcb;
-      
+        color:  #f6dcff;
         font-size: 23px;
-        font-weight: bold;
         transition: font-size 0.5s ease;
     }
+    
     .navbar-inverse .navbar-nav > li > a:hover,
     .navbar-inverse .navbar-nav > li > a:focus {
-     /* color: #4938df;*/
-      color: #488fcb;
+      color: white;
       font-size: 25px;
     }
+    
     
     
     .sidebar {
@@ -177,7 +67,7 @@
       z-index: 1;
       top:3px;
       left: 0;
-      background-color: #e6e5f3;
+      background-color:#7685bb;
       overflow-x: hidden;
       transition: 0.5s;
       padding-top: 60px;
@@ -188,14 +78,14 @@
       padding: 8px 8px 8px 32px;
       text-decoration: none;
       font-size: 25px;
-      color:  #488fcb;
+      color:  #ffffff;
       display: block;
       transition: 0.3s;
       
     }
     
     .sidebar a:hover {
-      color: #919396;
+      color: #61507a;
     }
     
     .sidebar .closebtn {
@@ -209,18 +99,17 @@
     .openbtn {
       font-size: 20px;
       cursor: pointer;
-      background-color: #e6e5f3;
-      color: #488fcb;
+      background-color: #7685bb;
+      color: white;
       padding: 20px 25px 17px 25px;
       margin-left: 5%;
-      border: 1px solid #e6e5f3;
-    
+      border: 1px solid #7685bb;
     
     
     }
     
     .openbtn:hover {
-      background-color:#919396;
+      background-color:#b3b5b9;
     }
     
     #main {
@@ -233,17 +122,22 @@
       .sidebar {padding-top: 15px;}
       .sidebar a {font-size: 18px;}
     }
-    td {
-      text-overflow: ellipsis;
-      overflow: hidden; 
-      white-space: nowrap;
-      max-width: 70px
+    .alert {
+      font-size: 21px;
+        font-weight: 600;
     }
+    .alert ul {
+        list-style-type: none;
+      }
+    
+    
     </style>
     <body>
-     <div class="wrapper"> 
-         <!-- start navbar -->
-         <nav class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
+    <div class="wrapper">
+    
+        <!-- start navbar -->
+    
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -285,11 +179,10 @@
         </nav>
       
   
-          
-          <!-- end navbar -->
+        
     
-    
-          <div id="mySidebar" class="sidebar">
+        <!-- end navbar -->
+        <div id="mySidebar" class="sidebar">
     
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         
@@ -315,65 +208,69 @@
         <div id="main">
       
           <button class="openbtn navbar-fixed-top" onclick="openNav()">☰ </button>  
-          <!-- start tabel-->
     
-        
-         <div class="container text-center part tan-tabel">
-          <h1 class="header-part"> الإعلانات</h1>
-          <input class="text-right s-model search " id="myInput" type="text" placeholder="بحث" >       
-             <table class="table">
-                 <thead>
-                     <tr>
-                         <td></td>
-                         <td> تاريخ الانتهاء </td>
-                         <td>  الشريحة</td>
-                         <td> المحتوى</td>
-                         <td> العنوان</td>
-                                           
-                     </tr>               
-                 </thead>
-                 <tbody id="myTable">
-                     @foreach ($advertisment as $adver)
-                     <tr>
-                      <td>
-                        <form style="display:inline" action="{{route('advertisment.delete',['id' => $adver->id])}}" method="POST">
-                          @csrf
-                          @method('DELETE')
-                          <button class="btn btn-danger " title="Delete">حذف</button>
-                      </form>
-                        <a href="{{route('editPageAdver',['id'=>$adver->id])}}" type="button" class="btn btn-success "> تعديل </a></td>
-                      <td>{{$adver->period}}</td>
-                      <td>{{$adver->slice}}</td>
-                      <td>{{$adver->content}}</td>
-                      <td>{{$adver->title}}</td>
-                                       
-                     </tr>
-                     @endforeach
-                     
-
-
-                 </tbody>
-                 <tfoot >
-                   <tr>
-                     <td>
-                      <a href="{{route('advertisment.add')}}" type="button" class="btn btn-primary foot"  style="margin-right :5px ;"> إضافة</a>
-                     </td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
+        <!-- start form-->
     
-                   </tr>
-    
-                 </tfoot>
-             </table>
+        <div class="add">
+            <div class="container text-right style-container"  >
+                <div class="tan" >
+                  @if (session()->has('status'))
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    {{ session('status') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                        </div>
+                 @endif
+                    <h1>  إضافة بيانات مادة </h1>
+                    <form action="{{route('matrial.create')}}" method="POST">
+                      @csrf
+                      <div class="row">
+                        <div class="col-md-6 col-md-offset-2" >
+                            <input type="text" id="ka" name="term" placeholder="trem..">
+                        </div>
+                        <div class="col-md-3"  >
+                            <label for="ka">  الفصل </label>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-2" >
+                            <input type="text" id="ka" name="name" placeholder="name..">
+                        </div>
+                        <div class="col-md-3"  >
+                            <label for="ka"> إسم المادة </label>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-2" >
+                            <input type="text" id="capacity" name="cat_name" placeholder="capacity..">
+                        </div>
+                        <div class="col-md-3"  >
+                            <label for="capasity">  رمز القسم </label>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" class="" value="إضافة">
+                    </div>
+                  </form>
+                </div>    
+            </div>
         </div>
-        <!-- end tabel-->
     
+         <!-- end form-->
     
-    </div>  <!---->
-     
     </div>
     <script>
       function openNav() {
@@ -386,18 +283,6 @@
         document.getElementById("main").style.marginLeft= "0";
       }
       </script>
-
-<script>
-  $(document).ready(function(){
-    $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#myTable tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
-  });
-  </script>
-
-     
+    
     </body>
 </html>

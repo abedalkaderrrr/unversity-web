@@ -16,4 +16,5 @@ class Matrial extends Model
     {
         return $this->belongsToMany('App\Models\User');
     }
+    protected $fillable = ['term','cat_name','name'];
 }

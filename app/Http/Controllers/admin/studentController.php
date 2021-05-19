@@ -166,9 +166,18 @@ class studentController extends Controller
       return Excel::download(new UsersExport($cat,$year), 'users.xlsx');
      
     }
-    public function importStudentByExcel ($cat,$year){
-
+    public function importStudentByExcel ($cat,$year,Request $request){
+      //  $path = $request->file()->getRealPath();
+        $file = $request->users;
+     //dd(request()->file('users')); 
+     if(request()->file('users') == null ){return redirect()->back();}
+      try {
         Excel::import(new UsersImport($cat,$year), request()->file('users'));
+      } catch (\Exception $ex) {
+        return redirect()->back()->with(['status'=>'something is wrong']);
+      }
+     
+      
     }
     
 }

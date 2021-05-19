@@ -212,8 +212,8 @@ position: fixed;
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     
-                  <li><a href="{{route('dashboard.profile',['id'=>Auth::user()->id])}}">الملف الشخصي</a></li>
-                  <li class="divider"></li>
+                    <li><a href="{{route('dashboard.profile',['id'=>Auth::user()->id])}}">الملف الشخصي</a></li>
+                    <li class="divider"></li>
                     <li><a class="dropdown-item"  href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
@@ -287,9 +287,9 @@ position: fixed;
                   </ul>
                   </div>
            @endif
-            <h1> تعديل بيانات طالب </h1>
+            <h1> تعديل بياناتي الشخصية </h1>
             
-            <form action="{{route('student.edit',['id'=>$student->id])}}" method="POST">
+            <form action="{{route('dashboard.profile.edit',['id'=>$student->id])}}" method="POST">
              @method('PUT')
              @csrf
              <div class="row">
@@ -300,7 +300,7 @@ position: fixed;
                     <input type="text" id="name" name="name" placeholder="name.." value="{{$student->name}}">
                 </div>
                 <div class="col-md-3"  >
-                    <label for="name"> اسم الطالب </label>
+                    <label for="name"> ألاسم  </label>
                 </div>
                 <div class="col-md-1"></div>
             </div>
@@ -313,15 +313,7 @@ position: fixed;
                 </div>
                 <div class="col-md-1"></div>
             </div>
-            <div class="row">
-              <div class="col-md-6 col-md-offset-2" >
-                  <input type="text" id="student_id" name="id_student" placeholder="id_student.." value="{{$student->id_student}}">
-              </div>
-              <div class="col-md-3"  >
-                  <label for="student_id"> رقم الطالب </label>
-              </div>
-              <div class="col-md-1"></div>
-          </div>
+            
             <div class="row">
                 <div class="col-md-6 col-md-offset-2" >
                     <input type="password" id="password" name="password" placeholder="password.">
@@ -331,78 +323,7 @@ position: fixed;
                 </div>
                 <div class="col-md-1"></div>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-2" >
-                  <select name="category">
-                    {{-- {{$student->category->name}} --}}
-                    @foreach ($categories as $cat)
-                        <option value="{{ $cat->name }}"
-                        @if ($student->category->name == $cat->name))
-                            selected="selected"
-                        @endif
-                        >{{ $cat->name }}</option>
-                    @endforeach
-                  </select>
-                </div>
-                <div class="col-md-3"  >
-                    <label for="ka"> القسم </label>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-2" >
-                  <select name="year">
-                   
-                    @for ($i = 1; $i < 6; $i++)
-                    <option value="{{$i}}"
-                    @if ($student->category->year == $i)
-                    selected="selected"
-                    @endif
-                    > {{$i}}</option> 
-                    @endfor
-                   </select>
-                </div>
-                <div class="col-md-3"  >
-                    <label  style="margin:auto 10px;" for="year"> السنة </label>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 col-md-offset-2" >
-                <select name="section">
-                 
-                  @for ($i = 1; $i < 4; $i++)
-                  <option value="{{$i}}"
-                  @if ($student->category->section == $i)
-                  selected="selected"
-                  @endif
-                  > {{$i}}</option> 
-                  @endfor
-                 </select>
-              </div>
-              <div class="col-md-3"  >
-                  <label  style="margin:auto 10px;" for="section"> الشعبة </label>
-              </div>
-              <div class="col-md-1"></div>
-          </div>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-2" >
-                  <select name="role_id">
-                    
-                    @foreach ($roles as $role)
-                        <option value="{{ $role->name }}"
-                        @if ($student->role_id == $role->name)
-                            selected="selected"
-                        @endif
-                        >{{ $role->name }}</option>
-                    @endforeach
-                  </select>
-                </div>
-                <div class="col-md-3"  >
-                    <label style="margin:auto 10px;" for="s"> الصلاحيات </label>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
+            
             <div class="row">
                 <input class="btn btn-primary" type="submit"  value="تعديل ">
             </div>

@@ -11,6 +11,7 @@ use App\Http\Controllers\admin\roomsController ;
 use App\Http\Controllers\admin\advrtismentController ;
 use App\Http\Controllers\admin\bookingController ;
 use App\Http\Controllers\admin\homeController ;
+use App\Http\Controllers\admin\matrialController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +38,13 @@ Route::get('/test', function () {
 });
 
 
-Route::group(['prefix' => 'Dashboard/','middleware'=>['auth']], function () { 
+Route::group(['prefix' => 'Dashboard/','middleware'=>['auth','admin']], function () { 
+    Route::get('index',[homeController::class,'index'])->name('dashboard.main');
+    Route::put('index/{id}/profile',[homeController::class,'edit'])->name('dashboard.profile.edit');
+    Route::get('index/{id}/profile', function ($id) {
+        
+        return view('dashboard.profile',['student'=>User::find($id)]);
+    })->name('dashboard.profile');
 
     Route::group(['prefix' => 'students/'], function () {
  
@@ -49,7 +56,8 @@ Route::group(['prefix' => 'Dashboard/','middleware'=>['auth']], function () {
          return redirect()->to(route('student.show',['cat' => $cat,'year'=>$year]));
        })->name('students');
        
-       Route::get('index/{cat}/{year}','App\Http\Controllers\admin\studentController@students')->name('student.show'); 
+       Route::get('index/{cat}/{year}','App\Http\Controllers\admin\studentController@students')->name('student.show');
+        
        //add  a student
        Route::get('index/{cat}/{year}/addstudent','App\Http\Controllers\admin\studentController@pageAddStudent')->name('pageAddStudent');
        Route::post('index/addstudent','App\Http\Controllers\admin\studentController@addStudent')->name('student.add');
@@ -62,9 +70,9 @@ Route::group(['prefix' => 'Dashboard/','middleware'=>['auth']], function () {
        //remove all students in this category
        Route::delete('index/students/{cat}/{year}/delete','admin\studentController@deleteStudents');
        //add a set of students by the excel file [import]
-       Route::post('index/{cat}/{year}/students/import/all','admin\studentController@importStudentByExcel');
+       Route::post('index/{cat}/{year}/students/import/all','App\Http\Controllers\admin\studentController@importStudentByExcel')->name('import.students');
        //export student file
-       Route::get('index/{cat}/{year}/students/export/all','admin\studentController@exportStudentByExcel');
+       Route::get('index/{cat}/{year}/students/export/all','App\Http\Controllers\admin\studentController@exportStudentByExcel')->name('export.students');
    });
 
 
@@ -86,7 +94,7 @@ Route::group(['prefix' => 'Dashboard/','middleware'=>['auth']], function () {
     
     });
 
-    Route::get('index',[homeController::class,'index'])->name('dashboard.main');
+   
 
     Route::group(['prefix' => 'categories/'], function () {
         Route::get('index',[categoryController::class,'index'])->name('category.index');
@@ -138,6 +146,18 @@ Route::group(['prefix' => 'Dashboard/','middleware'=>['auth']], function () {
          })->name('booking.add');
         Route::delete('index/{id}/delete',[bookingController::class,'deleteBooking'])->name('booking.delete');
         Route::put('index/{id}/edit',[bookingController::class,'editBooking']);
+        
+
+
+    });
+    Route::group(['prefix' => 'matrials/'], function () {
+        Route::get('index',[matrialController::class,'index'])->name('matrial.index');
+        Route::post('index/add',[matrialController::class,'addmatrial'])->name('matrial.create');
+        Route::get('index/add', function () {
+            return view('dashboard.matrial-add');
+         })->name('matrial.add');
+        Route::delete('index/{id}/delete',[matrialController::class,'deleteMatrial'])->name('matrial.delete');
+        Route::put('index/{id}/edit',[matrialController::class,'editBooking']);
         
 
 

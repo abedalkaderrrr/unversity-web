@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>advertisement-tabel</title>
+    <title>class-table</title>
     <!-- Scripts -->
-    <script src="{{ asset('js/dashboard/jquery-1.11.1.min.js') }}" defer></script>
-<script src="{{ asset('js/dashboard/bootstrap.js') }}" defer></script>
+
+
 
     <!-- Fonts -->
     <!-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> -->
@@ -36,113 +36,8 @@
         /*padding-top: 30px;*/
         padding-top: 40px;
       }
-      /* إصلاح خاص بالجدول من أجل الحواف الدائرية بلأعلى */
-      .tan-tabel {
-        margin-top: 2%;
-      }
-         /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - بداية*/
-    /*@media (min-width: 0px) and (max-width: 535px) {
-      .header-part {
-       
-        font-size: 25px;
-        font-weight: bold;
-      }
-      tbody {
-        font-size: 14px;
-        font-weight: 180px;
-      }
-      thead {
-        font-size: 15px;
-        font-weight: 300px;
-      }
-      .foot {
-        width: 45%;
-      }
-      .student-form label {
-        font-size: 15px;
-        font-weight: 300px;
-        margin-right: 8px;
-      }
-      .btn{
-        display: inline;
-      }
-    } 
-    
-        
-      @media (min-width: 536px) and (max-width: 800px) {
-      .header-part {
-        font-size: 25px;
-        font-weight: bold;
-      }
-      tbody {
-        font-size: 14px;
-        font-weight: 180px;
-      }
-      thead {
-        font-size: 15px;
-        font-weight: 300px;
-      }
-      .foot {
-        width: 45%;
-      }
-      .student-form label {
-        font-size: 15px;
-        font-weight: 300px;
-        margin-right: 8px;
-      }
-    }*/
-    /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - نهاية*/
-      /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - بداية*/
-      @media (min-width: 0px) and (max-width: 630px) {
-      .header-part {
-        font-size: 25px;
-        font-weight: bold;
-      }
-      tbody {
-        font-size: 14px;
-        font-weight: 180px;
-      }
-      thead {
-        font-size: 15px;
-        font-weight: 300px;
-      }
-      .foot {
-        width: 45%;
-      }
-      .student-form label {
-        font-size: 15px;
-        font-weight: 300px;
-        margin-right: 8px;
-      }
-      .btn{
-        display: inline;
-      }
-    } 
      
-      @media (min-width: 631px) and (max-width: 1000px) {
-      .header-part {
-        font-size: 25px;
-        font-weight: bold;
-      }
-      tbody {
-        font-size: 14px;
-        font-weight: 180px;
-      }
-      thead {
-        font-size: 15px;
-        font-weight: 300px;
-      }
-      .foot {
-        width: 45%;
-      }
-      .student-form label {
-        font-size: 15px;
-        font-weight: 300px;
-        margin-right: 8px;
-      }
-    }
-    /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - نهاية*/
-    
+        
     
     .navbar {
        /* padding-top: 5px;*/
@@ -151,23 +46,23 @@
         min-height: 40px; 
         margin-bottom: 0px;
         padding-top: 10px;
-    }
+      }
     
     
     .navbar-inverse .navbar-nav > li > a{
-      /*color: #4938df;*/
-      color: #488fcb;
-      
+        /*color: #4938df;*/
+        color: #488fcb;  
         font-size: 23px;
         font-weight: bold;
         transition: font-size 0.5s ease;
-    }
+      }
     .navbar-inverse .navbar-nav > li > a:hover,
     .navbar-inverse .navbar-nav > li > a:focus {
-     /* color: #4938df;*/
-      color: #488fcb;
-      font-size: 25px;
-    }
+        /* color: #4938df;*/
+        color: #488fcb;
+       font-size: 25px;
+      }
+      
     
     
     .sidebar {
@@ -216,7 +111,6 @@
       border: 1px solid #e6e5f3;
     
     
-    
     }
     
     .openbtn:hover {
@@ -233,15 +127,12 @@
       .sidebar {padding-top: 15px;}
       .sidebar a {font-size: 18px;}
     }
-    td {
-      text-overflow: ellipsis;
-      overflow: hidden; 
-      white-space: nowrap;
-      max-width: 70px
-    }
+    
     </style>
+    
     <body>
-     <div class="wrapper"> 
+    <div class="wrapper">
+        
          <!-- start navbar -->
          <nav class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">
           <div class="container">
@@ -285,10 +176,8 @@
         </nav>
       
   
+          <!-- end navbar-->
           
-          <!-- end navbar -->
-    
-    
           <div id="mySidebar" class="sidebar">
     
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
@@ -307,7 +196,7 @@
         
             <a href="{{route('adver.index')}}"><i class="fa fa-bullhorn"></i> الإعلانات </a>
             <a href="{{route('matrial.index')}}"><i class="fa fa-th-list"></i> المواد </a>
-          </div>
+        </div>
                
                  
           
@@ -315,89 +204,86 @@
         <div id="main">
       
           <button class="openbtn navbar-fixed-top" onclick="openNav()">☰ </button>  
+       
           <!-- start tabel-->
-    
-        
-         <div class="container text-center part tan-tabel">
-          <h1 class="header-part"> الإعلانات</h1>
-          <input class="text-right s-model search " id="myInput" type="text" placeholder="بحث" >       
-             <table class="table">
-                 <thead>
-                     <tr>
-                         <td></td>
-                         <td> تاريخ الانتهاء </td>
-                         <td>  الشريحة</td>
-                         <td> المحتوى</td>
-                         <td> العنوان</td>
-                                           
-                     </tr>               
-                 </thead>
-                 <tbody id="myTable">
-                     @foreach ($advertisment as $adver)
-                     <tr>
-                      <td>
-                        <form style="display:inline" action="{{route('advertisment.delete',['id' => $adver->id])}}" method="POST">
+         
+             
+          <div class="container text-center part tan-tabel">
+              <h1 class="header-part"> المواد </h1>
+              <input class="text-right s-model search " id="myInput" type="text" placeholder="بحث" >     
+
+              
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <td></td>
+                          <td> الفصل </td>
+                          <td> القسم </td>
+                          <td> اسم القاعة </td>                 
+                      </tr>               
+                  </thead>
+                  <tbody id="myTable">
+                      
+                      @foreach ($matrials as $matrial)
+                      <tr>
+                        <td><form style="display:inline" action="{{route('matrial.delete',['id' => $matrial->id])}}" method="POST">
                           @csrf
                           @method('DELETE')
                           <button class="btn btn-danger " title="Delete">حذف</button>
                       </form>
-                        <a href="{{route('editPageAdver',['id'=>$adver->id])}}" type="button" class="btn btn-success "> تعديل </a></td>
-                      <td>{{$adver->period}}</td>
-                      <td>{{$adver->slice}}</td>
-                      <td>{{$adver->content}}</td>
-                      <td>{{$adver->title}}</td>
-                                       
-                     </tr>
-                     @endforeach
+                          </td>
+                        <td>  {{$matrial->term}}  </td>
+                        <td>  {{$matrial->cat_name}}  </td>
+                        <td class="name">{{$matrial->name}}</td>                   
+                    </tr>   
+                      @endforeach
                      
-
-
-                 </tbody>
-                 <tfoot >
-                   <tr>
-                     <td>
-                      <a href="{{route('advertisment.add')}}" type="button" class="btn btn-primary foot"  style="margin-right :5px ;"> إضافة</a>
-                     </td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
+                  </tbody>
+                  <tfoot >
+                    <tr>
+                      <td>
+                        <a href="{{route('matrial.add')}}" type="button" class="btn btn-primary"  style="margin-right :5px ;">إضافة</a>
     
-                   </tr>
+                      </td>
+                     
+                      <td></td>
+                      <td></td>
+                      <td></td>
     
-                 </tfoot>
-             </table>
-        </div>
-        <!-- end tabel-->
+                    </tr>
     
-    
-    </div>  <!---->
-     
-    </div>
-    <script>
-      function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-      }
+                  </tfoot>
+              </table>
+          </div>
+          <!-- end tabel-->
       
-      function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-      }
-      </script>
-
-<script>
-  $(document).ready(function(){
-    $("#myInput").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#myTable tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
-  });
-  </script>
-
-     
+     </div> <!---->
+      
+    
+    
+      </div>
+      <script src="{{ asset('js/dashboard/jquery-1.11.1.min.js') }}" ></script>
+    <script src="{{ asset('js/dashboard/bootstrap.js') }}" ></script>
+      <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+        </script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+            });
+          });
+          </script>
     </body>
 </html>

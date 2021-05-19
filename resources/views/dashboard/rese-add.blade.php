@@ -158,8 +158,8 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     
-                    <li><a href="#">الملف الشخصي</a></li>
-                    <li class="divider"></li>
+                  <li><a href="{{route('dashboard.profile',['id'=>Auth::user()->id])}}">الملف الشخصي</a></li>
+                  <li class="divider"></li>
                     <li><a class="dropdown-item"  href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
@@ -200,7 +200,8 @@
                 <a href="{{route('booking.index')}}"><i class="fa fa-lock"></i> الحجوزات </a>
             
                 <a href="{{route('adver.index')}}"><i class="fa fa-bullhorn"></i> الإعلانات </a>
-                </div>
+                <a href="{{route('matrial.index')}}"><i class="fa fa-th-list"></i> المواد </a>
+              </div>
                
                  
           

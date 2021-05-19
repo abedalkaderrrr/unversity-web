@@ -259,6 +259,13 @@
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+  .alert {
+  font-size: 21px;
+    font-weight: 600;
+}
+.alert ul {
+    list-style-type: none;
+  }
   
     </style>
   <body>
@@ -287,8 +294,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                   
-                  <li><a href="#">الملف الشخصي</a></li>
-                  <li class="divider"></li>
+                <li><a href="{{route('dashboard.profile',['id'=>Auth::user()->id])}}">الملف الشخصي</a></li>
+                <li class="divider"></li>
                   <li><a class="dropdown-item"  href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
@@ -329,7 +336,8 @@
         <a href="{{route('booking.index')}}"><i class="fa fa-lock"></i> الحجوزات </a>
     
         <a href="{{route('adver.index')}}"><i class="fa fa-bullhorn"></i> الإعلانات </a>
-            </div>
+        <a href="{{route('matrial.index')}}"><i class="fa fa-th-list"></i> المواد </a>
+      </div>
            
              
       
@@ -344,6 +352,14 @@
          {{-- {{dd($cat)}} --}}
        <div class=" container text-right tan-tabel">
         <h1 class="header-part"> الطلاب </h1>
+        @if (session()->has('status'))
+                  <div class="alert alert-danger alert-dismissible" role="alert">
+                      {{ session('status') }}
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  @endif
 
         <form action="{{route('students')}}"> 
         @csrf
@@ -430,7 +446,12 @@
                <tfoot >
                  <tr>
                    <td>
-                     <a href="{{route('pageAddStudent',['cat'=>$catSelected ,'year'=>$yearSelected])}}" type="button" class="btn btn-primary foot"  style="margin-right :5px ;"> إضافة</a><a  type="button" class="btn btn-info foot "> تصدير </a>
+                     <a href="{{route('pageAddStudent',['cat'=>$catSelected ,'year'=>$yearSelected])}}" type="button" class="btn btn-primary foot"  style="margin-right :5px ;"> إضافة</a>
+                     <a  type="button" href="{{route('export.students',['cat'=>$catSelected ,'year'=>$yearSelected])}}" class="btn btn-info foot "> تصدير </a>
+
+                     <form style="display: inline" action="{{route('import.students',['cat'=>$catSelected ,'year'=>$yearSelected])}}" method="POST" enctype="multipart/form-data">
+                      @csrf
+                     <button type="submit"  class="btn btn-warning foot "> استيراد </button><input type="file" name="users"  ></form>
     
                    </td>
                    <td></td>
