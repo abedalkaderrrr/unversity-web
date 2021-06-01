@@ -21,5 +21,12 @@ class Booking extends Model
     {
         return $this->belongsTo('App\Models\Category');
     }
+    public function matrial()
+    {
+        return $this->belongsTo('App\Models\Matrial');
+    }
+
+
+
     protected $fillable = ['user_id','category_id','room_id','lecture','day','matrial_id'];
 }

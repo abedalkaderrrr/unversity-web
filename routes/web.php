@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use    Illuminate\Support\Facades\Auth;
 use    Illuminate\Support\Facades\Request;
 use App\Models\User;
-// use  App\Http\Controllers\admin\studentController;
+// controller for dashboard
 use App\Http\Controllers\admin\teacherController ;
 use App\Http\Controllers\admin\categoryController ;
 use App\Http\Controllers\admin\roomsController ;
@@ -12,6 +12,10 @@ use App\Http\Controllers\admin\advrtismentController ;
 use App\Http\Controllers\admin\bookingController ;
 use App\Http\Controllers\admin\homeController ;
 use App\Http\Controllers\admin\matrialController ;
+use App\Http\Controllers\students\postsController;
+use App\Http\Controllers\students\studController;
+// controller for teacher
+use App\Http\controllers\teacher\teachController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +42,7 @@ Route::get('/test', function () {
 });
 
 
-Route::group(['prefix' => 'Dashboard/','middleware'=>['auth','admin']], function () { 
+Route::group(['prefix' => 'Dashboard/','middleware'=>['auth']], function () { 
     Route::get('index',[homeController::class,'index'])->name('dashboard.main');
     Route::put('index/{id}/profile',[homeController::class,'edit'])->name('dashboard.profile.edit');
     Route::get('index/{id}/profile', function ($id) {
@@ -163,13 +167,59 @@ Route::group(['prefix' => 'Dashboard/','middleware'=>['auth','admin']], function
 
     });
 
-
-
 });
 
 
 
+Route::group(['prefix' => 'teacher/',], function () { 
+    Route::get('index',[teachController::class,'index'])->name('teach.main');
+    Route::post('test',[teachController::class,'test'])->name('test.api');
+    Route::post('booking/store',[teachController::class,'store'])->name('teach.store');
+    Route::post('lecture/store',[teachController::class,'storeLecture'])->name('teach.lecture');
+    Route::delete('lecture/{id}/delete',[teachController::class,'deleteLecture'])->name('teach.lecture.delete');
+    Route::get('projectAdver/{category}/{matrial}',[teachController::class,'projectAdver'])->name('teach.project');
+    Route::post('avertisment/{category}/{matrial}/add',[teachController::class,'advertismentAdd'])->name('teach.advertisment.add');
+    Route::post('avertisment/edit',[teachController::class,'advertismentEdit'])->name('teach.advertisment.edit');
+    Route::delete('advertisments/{id}/delete',[teachController::class,'deleteAdver'])->name('teach.adver.delete');
+    Route::post('projects/add',[teachController::class,'projectAdd'])->name('teach.project.add');
+    Route::delete('project/{id}/delete',[teachController::class,'deleteProject'])->name('teach.project.delete');
+    Route::post('project/edit',[teachController::class,'projectEdit'])->name('teach.project.edit');
+    Route::get('students/{category}',[teachController::class,'getStudent'])->name('teach.student.get');
+
+    Route::get('project/{id}/download',[teachController::class,'projectDownload'])->name('download.projects');
+
+    
+
+    
+
+});
+
+Route::group(['prefix' => 'students/'], function () { 
+ Route::get('index', [studController::class,'index'])->name('stud.index');
+ Route::get('advertisments/{cat}', [studController::class,'advertisments'])->name('stud.advertisments');
+ Route::get('projects/{cat}', [studController::class,'projects'])->name('stud.projects');
+ Route::post('projects/upload', [studController::class,'uploadProject'])->name('upload.project');
+ Route::get('posts', [studController::class,'myPosts'])->name('stud.myposts');
+
+ 
+
+
+ 
+
+});
+
+Route::group(['prefix' => 'posts/'], function () {
+    Route::get('{id}/index', [postsController::class ,'index'])->name('posts.index');
+    Route::post('post', [postsController::class ,'post'])->name('posts.post');
+    Route::post('commit', [postsController::class ,'commit'])->name('posts.commit');
+    Route::post('reply', [postsController::class ,'reply'])->name('posts.reply');
+    Route::delete('delete', [postsController::class ,'deletePost'])->name('post.delete');
+    Route::post('edit', [postsController::class ,'edit'])->name('posts.edit');
+
+
+    
 
 
 
 
+});

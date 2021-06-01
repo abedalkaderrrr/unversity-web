@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Project;
 
 class User extends Authenticatable
 {
@@ -22,6 +23,9 @@ class User extends Authenticatable
  {
      return $this->hasMany('App\Models\Booking');
  }
+ public function lectures(){
+    return $this->hasMany('App\Models\Lecture');
+ }
  public function matrials()
  {
      return $this->belongsToMany('App\Models\Matrial');
@@ -29,6 +33,10 @@ class User extends Authenticatable
  public function role()
  {
      return $this->belongsTo('App\Models\Role','role_id','name');
+ }
+ public function projects()
+ {
+     return $this->belongsToMany(Project::class)->withPivot('path');
  }
 
 

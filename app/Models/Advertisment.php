@@ -9,6 +9,6 @@ class Advertisment extends Model
 {
     use HasFactory;
 
-    protected $fillable =['title','content','slice','period'];
+    protected $fillable =['user_id','title','content','slice','period'];
     protected $dates = ['period','updated_at','created_at'];
 }

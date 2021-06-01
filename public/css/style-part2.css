@@ -1,0 +1,1377 @@
+body {
+  padding-bottom: 70px;
+  background-color: #f5f5f5;
+  background-color: #2900370d;
+  border-color: #dddddd8a;
+  font-family: "Tajawal", sans-serif;
+}
+
+/* .................. start login .................. */
+.body-login {
+  background-color: #e9e7ea;
+  background-color: #f5f5f5;
+}
+.login {
+  width: 580px;
+  margin: auto;
+  background-color: #e9e7ea;
+  background-color: #f5f5f5;
+  padding: 5px;
+  border: 2px solid rgb(247, 240, 240);
+  padding-bottom: 30px;
+  margin-top: 9%;
+  box-shadow: 5px 5px white;
+  box-shadow: -7px -7px 6px white, 5px 5px 6px #ddd;
+  border-radius: 1%;
+}
+.login h1 {
+  font-weight: bold;
+  color: #290037;
+  color: #2a5bac;
+  text-shadow: 1px 1px 5px;
+  padding: 5px;
+  font-size: 45px !important;
+}
+.login p {
+  font-size: 23px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(155, 151, 151);
+  padding: 5px;
+  margin: 15px;
+}
+.btn-sec {
+  background-color: #2a5bac;
+} /* إذ اعتمدت اللون الأول بتبدلي الزر تبع تسجيل الدخول من برايمري لسكندري و بتلغي  هاد*/
+.btn-primary {
+  background-color: #2a5bac;
+}
+.login a {
+  /*padding: 5px;*/
+  text-decoration: none;
+  color: #290037;
+  color: #2a5bac;
+  font-size: 15px;
+  font-weight: bold;
+}
+.login a:hover {
+  text-decoration: none;
+  color: #636f83;
+}
+.login input {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+  .login {
+    width: 450px;
+  }
+  .login h1 {
+    font-size: 35px !important;
+  }
+}
+/* ................... end login .................. */
+
+/*.................... start main-page-teacher ....................*/
+
+/* start-nav */
+.navbar {
+  margin-bottom: 30px;
+  padding: 0px;
+  background-color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(54 16 67);
+  font-size: 22px;
+  padding: 12px;
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: white;
+  background-color: rgb(216 204 221);
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+/* end-nav */
+
+/*start subject*/
+.main-header {
+  color: #290037;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #290037;
+  padding: 10px 20px;
+}
+.main-header a {
+  color: #290037;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #290037;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+.main-header a:hover,
+.main-header a:focus {
+  color: gray;
+}
+.subject-main,
+.program-main {
+  width: 100%;
+  margin: auto;
+}
+.subject,
+.program,
+.group {
+  background: white;
+  /*padding: 20px 35px 20px 35px;
+  border: 1px solid #290037a8;
+  border-radius: 18px;
+  box-shadow: 2px 2px 6px #290037a8;*/
+  padding-bottom: 20px;
+  border-bottom: 1px solid #290037a8;
+  margin: 10px;
+}
+.subject a {
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  color: white;
+  background: #290037a8;
+  text-align: center;
+  border-radius: 15px;
+  height: 80px;
+  padding-top: 10%;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/*end subject*/
+/* start total*/
+
+.total {
+  background-color: white;
+  border: 1px solid #290037a8;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  box-shadow: 2px 2px 6px #290037a8;
+  border-radius: 18px;
+}
+/* end total*/
+/*start group*/
+.group1 {
+  padding: 30px 20px 30px 30px;
+}
+/*end group*/
+
+/* start program*/
+.program {
+  /*background: white;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #290037a8;
+  border-radius: 18px;
+  box-shadow: 2px 2px 6px #290037a8;*
+  padding-bottom: 20px;*/
+  border-bottom: 1px solid white;
+}
+.program .table {
+  width: 95%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  margin: auto;
+}
+.program thead {
+  background: #c4b1cba8;
+  color: #290037;
+  font-size: 22px;
+  font-weight: 600;
+}
+.program tbody {
+  /* background: white; */
+  background: #faedff;
+  font-size: 20px;
+  font-weight: 180px;
+  color: #290037;
+}
+.program td a {
+  text-decoration: none;
+  margin-right: 5px;
+  padding: 4px;
+  font-size: 18px;
+  display: block;
+  color: gray;
+  text-decoration: none;
+}
+.program td a:hover,
+.program td a:focus {
+  text-decoration: none;
+  color: #290037;
+}
+.today {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* end program*/
+
+@media (min-width: 0px) and (max-width: 545px) {
+  .btn-link {
+    font-size: 18px;
+  }
+  .main-header,
+  .main-header a {
+    font-size: 20px;
+  }
+  .subject a {
+    font-size: 12px;
+    padding-top: 25%;
+  }
+  .program .table {
+    width: 70%;
+    margin: auto;
+  }
+  table {
+    /* width: 70%;
+    margin: auto;
+    width: 100px;*/
+    height: 100px;
+    overflow: scroll;
+  }
+
+  .program thead {
+    font-size: 12px;
+  }
+  .program td a,
+  .today {
+    font-size: 8px;
+  }
+  .container-table {
+    height: 500px;
+
+    width: 400px;
+    overflow: scroll;
+    margin: auto;
+  }
+}
+
+@media (min-width: 546px) and (max-width: 1000px) {
+  .btn-link {
+    font-size: 18px;
+  }
+  .main-header,
+  .main-header a {
+    font-size: 20px;
+  }
+  .subject a {
+    font-size: 15px;
+    padding-top: 20%;
+  }
+  .program .table {
+    width: 90%;
+  }
+  .program thead {
+    font-size: 15px;
+  }
+  .program td a,
+  .today {
+    font-size: 12px;
+  }
+}
+@media (min-width: 545px) and (max-width: 769px) {
+  .container-table {
+    height: 500px;
+
+    width: 430px;
+    overflow: scroll;
+    margin: auto;
+  }
+}
+@media (min-width: 1001px) and (max-width: 1300px) {
+  .btn-link {
+    font-size: 20px;
+  }
+  .main-header,
+  .main-header a {
+    font-size: 30px;
+  }
+  .subject a {
+    font-size: 18px;
+    padding-top: 15%;
+  }
+  .program thead {
+    font-size: 19px;
+  }
+  .program td a,
+  .today {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1301px) {
+  .btn-link {
+    font-size: 22px;
+  }
+}
+
+/*  start model */
+.s-model {
+  width: 80%;
+  margin: auto;
+  border: 2px solid #29003759;
+  box-shadow: 2px 2px 5px #29003759;
+}
+.l-model {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #290037;
+  margin: 0px 40px 10px;
+}
+
+.form-add input,
+.form-add textarea,
+.form-add select {
+  width: 80%;
+  margin: auto;
+  color: #290037;
+  background-color: #fff;
+  border: 1px solid #290037a8;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 1px 1px #2900378a;
+}
+.form-add input :hover,
+.form-add input :focus {
+  border-top: 1px solid #2900378a;
+  border-color: #2900378a;
+  box-shadow: 2px 2px #2900378a, -2px -2px #2900378a;
+}
+/* ضل بس إني أخلص من اللون الأزرق وقت اضغط على الحقل  */
+/* end model */
+
+/*.................... end main-page-teacher ....................*/
+
+/*.................... start project .................... */
+
+/* start table project*/
+.file {
+  /*width: 10%;
+    margin-right: 2%;*/
+}
+.un {
+  /* width: 32%;*/
+  width: 66%;
+}
+.pres {
+  border: 2px solid #2900378a;
+}
+.my-posts .table,
+.project .table {
+  /* width: 100%;*/
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  margin: auto;
+}
+.my-posts thead,
+.project thead {
+  background: #c4b1cba8;
+  color: #290037;
+  font-size: 22px;
+  font-weight: 600;
+}
+.my-posts tbody,
+.project tbody {
+  background: #faedff;
+  font-size: 20px;
+  font-weight: 180px;
+  color: #290037;
+}
+@media (min-width: 0px) and (max-width: 771px) {
+  .un {
+    /* width: 100%;*/
+  }
+  .my-posts thead,
+  .project thead {
+    font-size: 14px;
+  }
+  .my-posts tbody,
+  .project tbody {
+    font-size: 12px;
+  }
+}
+@media (min-width: 772px) and (max-width: 900px) {
+  .un {
+    /* width: 100%;*/
+  }
+  .my-posts thead,
+  .project thead {
+    font-size: 18px;
+  }
+  .my-posts tbody,
+  .project tbody {
+    font-size: 16px;
+  }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .un {
+    /*width: 100%;*/
+  }
+  .my-posts thead,
+  .project thead {
+    font-size: 20px;
+  }
+  .my-posts .table,
+  .project tbody {
+    font-size: 18px;
+  }
+}
+/* end table project */
+
+/*.................... end project .................... */
+
+/*.................... start advertisting  ....................*/
+.body-adver {
+  background-color: #faf8f8;
+}
+.adver,
+.post {
+  padding: 20px 30px;
+  background-color: #2900370d;
+  background-color: white;
+  border: 1px solid #290037a8;
+  border-radius: 50px 5px;
+  margin-bottom: 5%;
+  box-shadow: 2px 2px 6px #290037a8;
+}
+.post {
+  margin-top: 14px;
+}
+.advertisting {
+  padding: 20px 10%; /* كنت عاملتها عشرين بلمية بس لاقيتها كتير كبيرة (إذ اعتمدتيها لازم تغكي تعليق الميديا تحت ) */
+}
+.tital {
+  /* background-color: white;
+  border: 1px solid #290037a8;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  box-shadow: 2px 2px 6px #290037a8;*/
+  border-bottom: 2px solid #290039a8;
+  margin-bottom: 5%;
+}
+.secandry-tital {
+  color: #290037;
+  font-size: 18px;
+  font-weight: 500;
+}
+.adver-p {
+  color: #290037;
+  font-size: 22px;
+  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
+  font-weight: 500;
+}
+.btn-proj-adver {
+  border-radius: 4px;
+  margin-right: 10px;
+}
+@media (min-width: 0px) and (max-width: 360px) {
+  .btn-proj-adver {
+    margin: 10px -10px;
+    margin: 10px 2px 10px -10px;
+    border-radius: 4px;
+    width: 36px;
+    font-size: 10px;
+    padding: 1px;
+  }
+  .projects,
+  .advert {
+    font-size: 20px;
+    font-weight: bold;
+    color: #290037;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  .adver,
+  .post {
+    padding: 20px 7px;
+  }
+  .advertisting-list .list-group-item p {
+    font-size: 20px;
+  }
+}
+/*@media (min-width: 0px) and (max-width: 992px) {
+  .advertisting {
+    padding: 10px;
+  }
+}*/
+
+/*.................... end advertisting  ....................*/
+
+/*.................... start project and advert....................*/
+.project a {
+  /* padding: 15px; */
+  text-decoration: none;
+  display: block;
+  color: white;
+  background: #290037a8;
+  text-align: center;
+  /*border-radius: 16px;*/
+  border-radius: 80px;
+  height: 100px;
+  padding-top: 4%;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+.project2 {
+  background: white;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #290037a8;
+  margin: 10px;
+  font-size: large;
+}
+.main-header2 {
+  color: #290037;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #290037;
+  padding: 10px 20px;
+}
+.projects,
+.advert {
+  font-size: 27px;
+  font-weight: bold;
+  color: #290037;
+}
+.btn-add {
+  margin: 10px;
+  border-radius: 4px;
+}
+@media (min-width: 0px) and (max-width: 769px) {
+  .project a {
+    padding-top: 13%;
+  }
+  .main-header2,
+  .project a {
+    font-size: 28px;
+  }
+  .projects,
+  .advert {
+    font-size: 18px;
+  }
+}
+@media (min-width: 770px) and (max-width: 992px) {
+  .project a {
+    padding-top: 7%;
+  }
+}
+
+/*.................... end project and advert.................... */
+
+/*  ....................start montada ....................*/
+.nav-m {
+  background-color: #f8f4f9f7;
+  color: #290037;
+  border-bottom: 1px solid #290037a8;
+}
+.nav-m h2 {
+  font-size: 2rem;
+  color: #290037;
+  font-weight: bold;
+}
+.to {
+  /*background-color: white*/
+  padding: 20px 5%;
+}
+.proj-adver {
+  border-left: 1px solid #290037a8;
+}
+.adver span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #290037;
+  /*transition: font-size 0.5s ease;*/
+  transition: color 0.5s ease;
+}
+
+.adver a {
+  text-decoration: none;
+  color: #290037;
+  /*transition: font-size 0.5s ease;*/
+  transition: color 0.5s ease;
+}
+.adver a:hover,
+.adver a:focus {
+  text-decoration: none;
+  color: #29003759;
+}
+.secandry-header {
+  font-size: 30px;
+  font-weight: 600;
+  color: #290037;
+  /*font-size: 35px;*/
+  /*text-shadow: 1px 1px 5px #290037a8;*/
+}
+.project-m {
+  margin-top: 10px;
+}
+/* لألغي حواف الغروب ليست وخلي الكلام بلنص  */
+
+.advertisting-list .list-group-item {
+  border: none;
+  text-align: right;
+}
+.project-list .list-group-item {
+  border: none;
+  text-align: center;
+}
+.adver-list,
+.post-contanier {
+  background: #faf8f8;
+  padding: 15px;
+  border-radius: 50px 5px;
+  border: 1px solid #ddd;
+}
+.post-contanier {
+  margin-bottom: 10px;
+}
+.advertisting-list .list-group-item h5 {
+  /* font-size: 1.25rem; */
+  color: #290037;
+  font-size: 20px;
+  font-weight: 500;
+}
+.advertisting-list .list-group-item p {
+  color: #290037;
+  font-size: 23px;
+  text-align: right;
+  font-weight: 500;
+}
+/* الإصلاح الخاص بلغريد ليصير شكلو مقبول بس وقت طبقو عم ينتزع زر التعليقات */
+/*@media (min-width: 1200px){
+  .col-lg-e-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+}
+
+}
+@media (min-width: 1200px){
+.col-lg-e-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+}
+@media (min-width: 1200px){
+  .proj-adver {
+    border-left: none;
+  }
+  }*/
+
+@media (min-width: 0px) and (max-width: 601px) {
+  .adver span {
+    font-size: 12px;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .adver span {
+    font-size: 15px;
+  }
+}
+@media (min-width: 0px) and (max-width: 992px) {
+  .proj-adver {
+    border-left: none;
+  }
+}
+
+/*  style post */
+
+.username a {
+  display: block;
+  font-size: 30px;
+  text-align: right;
+  font-weight: bold;
+  color: #290037 !important;
+  text-decoration: none;
+  /* color: #007bff; */
+  /* text-decoration: none; */
+  background-color: transparent;
+}
+.username-c a {
+  display: block;
+  font-size: 20px;
+  text-align: right;
+  font-weight: bold;
+  color: #290037 !important;
+  text-decoration: none;
+  /* color: #007bff; */
+  /* text-decoration: none; */
+  background-color: transparent;
+}
+
+.description {
+  display: block;
+  font-size: 15px;
+  text-align: right;
+  font-weight: 300;
+  color: #290037 !important;
+  text-decoration: none;
+}
+.description-c {
+  display: block;
+  font-size: 10px;
+  text-align: right;
+  font-weight: 300;
+  color: #290037 !important;
+  text-decoration: none;
+}
+.post-contanier p {
+  color: #290037;
+  font-size: 22px;
+  text-align: right;
+}
+/*p.conten-c {
+  color: #290037;
+  font-size: 20px;
+  text-align: right;
+}*/
+
+.post-contanier img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  margin: 5px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.post-contanier img:hover {
+  opacity: 1;
+}
+
+.post-contanier .btn-post,
+.post-contanier .btn-add-comment {
+  background: #2900378a;
+  border: 1px solid #2900378a;
+  border-radius: 10px;
+}
+
+.post-contanier .btn-post:hover,
+.post-contanier .btn-post:focus {
+  box-shadow: 1px 1px #290037a8, -1px -1px #290037a8;
+}
+.post-contanier .input-add-comment {
+  width: 100%;
+  color: #290037;
+  background-color: #fff;
+  border: 1px solid #290037a8;
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.post-contanier .input-add-comment:hover,
+.post-contanier .input-add-comment:focus {
+  border-top: 1px solid #2900378a;
+  border-color: #2900378a;
+  box-shadow: 1px 1px #2900378a;
+}
+
+.post-divider {
+  border-top: 1px solid #290037a8;
+}
+.col-post {
+  height: 260px;
+  overflow-y: scroll;
+}
+
+/*.card-body {
+  background: #29003712;
+  border-radius: 30px 5px;
+}*/
+/* end post */
+
+/*.................... end montada ....................*/
+.scroll-top {
+  width: 50px;
+  right: 15px;
+  bottom: 10px;
+  background: #2900378a;
+  position: fixed;
+  height: 40px;
+  color: #ddd;
+  text-align: center;
+  z-index: 99999;
+  /*display: none;*/
+  cursor: pointer;
+  border-radius: 50%;
+}
+.scroll-top:hover {
+  background: #444;
+}
+
+/*.card .card-body {
+  background: #f7e2ff;
+  border-radius: 56px;
+  border: #f7e2ff;
+  margin: 10px auto;
+}
+.comment {
+  background: #fbeeff;
+  border-radius: 56px;
+  border: #f7e2ff;
+  margin: 10px auto;
+  padding: 15px;
+}8*/
+/*غيوم التعليقات والردود*/
+.chat-list li {
+  padding-top: 3px;
+  color: #ffffff;
+}
+
+.chat-list .chat-img {
+  float: left;
+  width: 48px;
+}
+
+.chat-list .chat-img img {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 100%;
+}
+
+.chat-list .chat-message {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: #580f75;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+}
+.chat-list .chat-message2 {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  background: #474547;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.chat-list .chat-message:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 0;
+  height: 0;
+}
+.chat-list .chat-message2:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 0;
+  height: 0;
+}
+
+.chat-list .chat-message p {
+  line-height: 25px;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.chat-list .chat-message2 p {
+  line-height: 25px;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+.chat-list .chat-body {
+  margin-left: 30px;
+  float: left;
+  width: 60%;
+  color: #ffffff;
+}
+
+.chat-list .out .chat-img {
+  float: right;
+}
+
+.chat-list .out .chat-body {
+  float: right;
+  margin-right: 10px;
+  text-align: right;
+  font-size: medium;
+  color: #ffffff;
+  font-weight: bold;
+  /* من عندي */
+  width: 100%;
+}
+.chat-list .out .t {
+  /* من عندي */
+  width: 80%;
+}
+
+.chat-list .out .chat-message {
+  background: #b0a0b6;
+}
+
+.chat-list .out .chat-message:before {
+  right: -1px;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #b0a0b6;
+}
+
+.chat-list .out .chat-message2 {
+  background: #c7c7c7;
+  width: 100%; /*ضفتو من عندي*/
+}
+
+.chat-list .out .chat-message2:before {
+  right: -1px;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid#c7c7c7;
+}
+.card .card-body {
+  /* width: 630px;من عندك وحطيت بديل يلي تحتو*/
+  width: 100%;
+  /* height: 225px;من عندك وحطيت بديل يلي تحتو*/
+  height: auto;
+  padding-top: 1px;
+}
+.re2 {
+  /* width: 600px;من عندك وحطيت بديل يلي تحتو*/
+  width: 100%;
+  /*height: 250px;من عندك وحطيت بديل يلي تحتو*/
+  height: auto;
+  margin-top: 1em; /* من عندي ضايفتو */
+}
+/*  ..................................................................start-mark................................................... */
+.body-mark {
+  background: white;
+  /* background-image: linear-gradient(darkgray 50%, #f5f5f5 50%);
+  padding-bottom: 0px;*/
+}
+.body-mark nav {
+  background: darkgray;
+}
+.body-mark .navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 22px;
+  padding: 12px;
+}
+
+.body-mark .navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  /* color: white;
+  background-color: rgb(216 204 221);*/
+  color: darkgray;
+  background-color: white;
+}
+.ta h4 {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.page-mark {
+  background: white;
+  padding: 10px 40px 20px;
+  /*border: 1px solid #ddd;
+  border-radius: 10px;*/
+}
+
+.table-mark {
+  border: 2px solid lightgray;
+  box-shadow: 3px 3px 5px 0 lightgrey;
+}
+.table-mark thead {
+  background: lightgrey;
+}
+.table-mark thead td {
+  color: #4b4b4b;
+  font-size: 20px;
+  font-weight: 700;
+}
+.table-mark tbody {
+  background: #f4f2f430;
+}
+.table-mark tbody td {
+  color: gray;
+  font-size: 18px;
+  font-weight: 600;
+}
+/*  .................................................................. end-mark................................................... */
+/*  .................................................................. start-body-main-page-exam................................................... */
+.body-main-page-exam {
+  background: white;
+  /* background-image: linear-gradient(darkgray 50%, #f5f5f5 50%);
+  padding-bottom: 0px;*/
+}
+
+.body-main-page-exam nav {
+  background: #0e0e0ef0;
+}
+.body-main-page-exam .navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 22px;
+  padding: 12px;
+}
+
+.body-main-page-exam .navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  /* color: white;
+  background-color: rgb(216 204 221);*/
+  color: black;
+  background-color: white;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.body-main-page-exam .navbar-light .navbar-toggler {
+  background: white;
+}
+.m {
+  background: #545454;
+  margin: auto 20px;
+  padding: 12%;
+  border-radius: 5px;
+  border-radius: 50%;
+}
+.m a {
+  color: white;
+  text-decoration: none;
+  font-size: 29px;
+  font-weight: bold;
+  transition: font-size 0.5s ease;
+}
+.m a:hover,
+.m a:focus {
+  font-size: 30px;
+}
+/* بداية النمط الثاني 
+.body-main-page-exam nav {
+  background: cadetblue;
+}
+.m {
+  background: #5f9ea087;
+  margin: auto 20px;
+  padding: 12%;
+  border-radius: 5px;
+  border-radius: 50%;
+}*/
+
+/*  .................................................................. end-body-main-page-exam................................................... */
+/* بداية تنسيق صفحة رغع علامات الطالب*/
+
+.s-model {
+  width: 80%;
+  margin: auto;
+  border: 2px solid darkgray;
+  box-shadow: 1px 1px darkgrey;
+}
+.search {
+  margin: 40px auto;
+}
+
+.search .s-model {
+  /*width: 40%;*/
+  margin: auto;
+  border: 2px solid darkgray;
+  box-shadow: 1px 1px darkgrey;
+}
+.search label {
+  /* text-align: left; */
+  margin: auto 75px auto -60px;
+  margin-right: 5%;
+}
+@media (min-width: 0px) and (max-width: 789px) {
+  .search label {
+    margin-right: 0px;
+  }
+}
+/*.body-mark {
+  background: transparent;
+  background-image: linear-gradient(22deg, gray, transparent);
+}
+.contain {
+  background: white;
+  padding: 30px 30px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}*/
+/* تنسيق رفع علامات طال يلي حاسستو مقبول */
+/* النمط الأول */
+.body-mark {
+  background: #eee;
+}
+.body-mark nav {
+  background: gray;
+}
+.contain {
+  background: white;
+  padding: 30px;
+  /* border: 1px solid #ddd;*/
+  border-radius: 20px;
+}
+/* النمط الثاني 
+.body-mark {
+  background: #eee;
+  background-image: linear-gradient(gray 50%, #eee 50%);
+}
+.body-mark nav {
+  background: gray;
+}
+.contain {
+  background: white;
+  padding: 30px;
+  /* border: 1px solid #ddd;*
+  border-radius: 20px;
+}*/
+/* نمط تالت *
+.body-mark {
+  background: #5f9ea00f;
+}
+.body-mark nav {
+  background: cadetblue;
+}
+.contain {
+  background: white;
+  padding: 30px;
+  /* border: 1px solid #ddd; *
+  border-radius: 20px;
+}
+.s-model {
+  width: 80%;
+  margin: auto;
+  border: 2px solid cadetblue;
+  box-shadow: 1px 1px cadetblue;
+}
+.search .s-model {
+  /* width: 40%; *
+  margin: auto;
+  border: 2px solid cadetblue;
+  box-shadow: 1px 1px cadetblue;
+}
+.table-mark thead {
+  background: #5f9ea087;
+}
+.table-mark tbody {
+  background: #f4f2f430;
+}
+/* النمط الرابع 
+.body-mark {
+  background: #a5a4a321;
+}
+.body-mark nav {
+  background: #a5a4a3;
+}
+.s-model {
+  width: 80%;
+  margin: auto;
+  border: 2px solid #a5a4a3;
+  box-shadow: 1px 1px #a5a4a3;
+}
+.search .s-model {
+  /* width: 40%; *
+  margin: auto;
+  border: 2px solid #a5a4a3;
+  box-shadow: 1px 1px #a5a4a3;
+}
+.table-mark thead {
+  background: #a5a4a3;
+}
+.table-mark tbody {
+  background: rgba(244, 242, 244, 0.19);
+}*/
+
+/* نهاية تنسيق صفحة رفع علامات الطالب */
+
+.form-group {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+@media (min-width: 0px) and (max-width: 630px) {
+  .re2 .chat-list {
+    margin-left: -40%;
+  }
+}
+@media (min-width: 631px) {
+  .re2 .chat-list {
+    margin-left: -20%;
+  }
+}
+/*جديد*/
+.btn-link {
+  color: #290037;
+  /*font-size: 22px;*/
+  font-weight: 600;
+  text-decoration: none;
+  transition: font-size 0.5s ease;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #290037;
+  font-size: 23px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-link:focus {
+  color: #290037;
+  font-size: 23px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 3px solid #2900378a;
+  box-shadow: 3px 3px 5px #2900378a;
+}
+.container-leacture {
+  padding-right: 1rem;
+}
+.form-lracture .point {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.form-lracture .point label {
+  color: #290037;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 10%;
+}
+.form-lracture .point input {
+  border: 2px solid #2900378a;
+  box-shadow: 2px 2px 5px #2900378a;
+  width: 80%;
+  margin-left: auto;
+  margin-right: 1%;
+}
+@media (min-width: 0px) and (max-width: 600px) {
+  .form-lracture .point label {
+    font-size: 12px;
+  }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  .form-lracture .point label {
+    font-size: 14px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1200px) {
+  .form-lracture .point label {
+    font-size: 16px;
+  }
+}
+@media (min-width: 0px) and (max-width: 545px) {
+  .container-table-lracture {
+    height: 500px;
+    width: 321px;
+    overflow-y: scroll;
+    margin: auto;
+  }
+}
+/*............................... start-lecture.........................*/
+/*.lec {
+  background-color: rgb(241, 250, 249);
+}
+.tital2 {
+  border-bottom: 2px solid #154552a8;
+  margin-bottom: 5%;
+}
+.main-header {
+  color: #002c37;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #639faa;
+  padding: 10px 20px;
+}
+.lect {
+  padding: 5px 40px;
+  background-color: #30727ab6;
+  background-color: white;
+  border: 1px solid #4b8188a8;
+  border-radius: 50px 5px;
+  margin-bottom: 3%;
+  box-shadow: 2px 2px 6px #35737aa8;
+}
+.lect a {
+  color: #025858;
+  font-size: 35px;
+  font-weight: 450px;
+  transition: color 0.5s ease;
+}*/
+.subject2 {
+  border-bottom: 2px solid #290037a8;
+}
+.subject2 a {
+  padding: 4px;
+  text-decoration: none;
+  display: block;
+
+  margin-left: 80px;
+  background: #290037a8;
+  text-align: center;
+  color: cornsilk;
+  border-radius: 15px;
+  height: 70px;
+  width: 220px;
+  padding-top: 10%;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.lec {
+  background-color: rgb(241, 250, 249);
+}
+.main-header-lecture {
+  color: #002c37;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #639faa;
+  padding: 10px 20px;
+}
+
+.lect {
+  padding: 5px 40px;
+  background-color: #30727ab6;
+  background-color: white;
+  border: 1px solid #4b8188a8;
+  border-radius: 50px 5px;
+  margin-bottom: 3%;
+  box-shadow: 2px 2px 6px #35737aa8;
+}
+.lect a {
+  color: #025858;
+  font-size: 35px;
+  font-weight: 450px;
+
+  transition: color 0.5s ease;
+}
+.lect a:hover,
+.lect a:focus {
+  text-decoration: none;
+  color: #789ea5e1;
+}
+.secandry-header2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #204c53;
+  /*font-size: 35px;*/
+  /*text-shadow: 1px 1px 5px #290037a8;*/
+}
+.tital2 {
+  border-bottom: 2px solid #154552a8;
+  margin-bottom: 5%;
+}
