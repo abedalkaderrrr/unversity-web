@@ -100,4 +100,8 @@ class studController extends Controller
         $posts = Post::where('user_id',Auth::id())->orderBy('updated_at','desc')->get();
         return view('students.myPosts',['posts'=>$posts]);
     }
+    public function profile(){
+       // dd(public_path());
+        return view('students.editprofile');
+    }
 }

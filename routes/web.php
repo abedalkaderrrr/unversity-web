@@ -200,6 +200,8 @@ Route::group(['prefix' => 'students/'], function () {
  Route::get('projects/{cat}', [studController::class,'projects'])->name('stud.projects');
  Route::post('projects/upload', [studController::class,'uploadProject'])->name('upload.project');
  Route::get('posts', [studController::class,'myPosts'])->name('stud.myposts');
+ Route::get('profile', [studController::class,'profile'])->name('stud.profile');
+
 
  
 
