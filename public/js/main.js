@@ -12,17 +12,23 @@ for(let i = 0; i < vvd.length; i++)
          document.querySelector('.day-model').setAttribute('value',ss);
          document.querySelector('.lecture-model').setAttribute('value',ll);
 
-        //  console.log(ss);
-         // console.log(ll);
+         // console.log(ss);
+          //console.log(ll);
         },
         false
       );
-// var section = document.querySelector('.section');
-// section.addEventListener("change",()=>{ 
-//     onClick();
+      
+var section = document.querySelector('.section');
+if(section){
+  section.addEventListener("change",()=>{ 
+  
+    onClick();
+    console.log('test');
 
+ },false);
 
-//  },false);
+}
+
 
  function removeAllChildNodes(parent) {
     while (parent.firstChild) {
@@ -229,4 +235,11 @@ $('#exampleModal3').on('show.bs.modal', function (event) {
 
 
 
- 
+  $(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });

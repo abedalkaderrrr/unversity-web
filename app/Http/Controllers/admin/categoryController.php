@@ -18,7 +18,7 @@ class categoryController extends Controller
             ['year'=>'integer|required',
              'section'=>'integer|required',
              'name'=>'string|required',
-             'catId'=>'unique:categories|required',
+             'catId'=>'required',
   
            ]
        );

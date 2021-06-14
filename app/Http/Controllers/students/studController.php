@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Advertisment;
 use App\Models\Booking;
 use App\Models\Category;
+use App\Models\Lecture;
 use App\Models\Matrial;
 use App\Models\Post;
 use App\Models\Project;
@@ -14,6 +15,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class studController extends Controller
 {
@@ -103,5 +105,32 @@ class studController extends Controller
     public function profile(){
        // dd(public_path());
         return view('students.editprofile');
+    }
+    public function  profileEdit(Request $request){
+        $fileNameToStore = null ;
+        if(! is_null($request->file('image'))){
+       $filenameWithExt = $request->file('image')->getClientOriginalName ();
+     
+       $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+       $extension = $request->file('image')->getClientOriginalExtension();
+       $fileNameToStore = $filename. '_'. time().'.'.$extension;
+       
+      // dd($fileNameToStore);
+       $path = $request->file('image')->storeAs('public/photos', $fileNameToStore);
+        }
+       // dd($fileNameToStore);
+        $user = User::find(Auth::id());
+        $user->update([
+            'photo'=> ($fileNameToStore == null) ? $user->photo : $fileNameToStore , 
+            'password'=>(Hash::make($request->oldpassword) == $user->password) ? Hash::make($request->newpassword) :$user->password ,
+            'email' => $request->email,
+        ]);
+       // dd($user);
+        return redirect()->back();
+
+    }
+    public function lectures($id){
+        $lectures = Lecture::where('matrial_id',$id)->get();
+        return view('students.lectures',['lectures'=>$lectures]);
     }
 }

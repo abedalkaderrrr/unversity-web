@@ -11,22 +11,24 @@
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto ">
-          <li class="nav-item">
-            <a class="nav-link" href="advertising.html"> الإعلانات </a>
-          </li>
+         
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              اسم الطالب
+              {{Auth::user()->name}} 
             </a>
             <div class="dropdown-menu text-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"> حقول </a>
-                <a class="dropdown-item" href="#"> قواعد </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">برمجة</a>
+                <a class="dropdown-item" href="{{route('stud.profile')}}" >الملف الشخصي</a>
+                <a class="dropdown-item"  href="{{ route('logout') }}"  onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">تسجيل الخروج</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf 
+                </form>
+                
+               
             </div>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">الصفحة الرئيسية <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{route('stud.index')}}">الصفحة الرئيسية <span class="sr-only">(current)</span></a>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link" href="#"> الصفحة الرئيسية </a>
@@ -46,7 +48,7 @@
                    
                     @foreach ($matrials as $item)
                     <div class="col-md-3 col-sm-4 col-4">
-                        <a href="#" class="led"> {{$item->name}} </a>
+                        <a href="{{route('posts.index',['id'=>$item->id])}}" class="led"> {{$item->name}} </a>
                     </div>
                     @endforeach
                    
@@ -62,7 +64,7 @@
                         <h1 class="main-header text-right group1" > <a href="{{route('stud.projects',['cat'=>$category])}}">المشاريع </a></h1>
                     </div>
                     <div class="col-4">
-                        <h1 class="main-header text-right group1"  >  <a href="mark.html"> العلامات </a> </h1>
+                        <h1 class="main-header text-right group1"  >  <a href="{{route('student.marks')}}"> العلامات </a> </h1>
                     </div>
                     <div class="col-4">
                         <h1 class="main-header text-right group1" >  <a href="{{route('stud.advertisments',['cat'=>$category])}}"> الإعلانات</a></h1>

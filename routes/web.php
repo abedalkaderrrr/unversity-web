@@ -12,6 +12,7 @@ use App\Http\Controllers\admin\advrtismentController ;
 use App\Http\Controllers\admin\bookingController ;
 use App\Http\Controllers\admin\homeController ;
 use App\Http\Controllers\admin\matrialController ;
+use App\Http\Controllers\marks\marksController;
 use App\Http\Controllers\students\postsController;
 use App\Http\Controllers\students\studController;
 // controller for teacher
@@ -34,7 +35,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->middleware('loginRoute')->name('home');
 
 
 Route::get('/test', function () {
@@ -42,7 +43,7 @@ Route::get('/test', function () {
 });
 
 
-Route::group(['prefix' => 'Dashboard/','middleware'=>['auth']], function () { 
+Route::group(['prefix' => 'Dashboard/','middleware'=>['auth','admin']], function () { 
     Route::get('index',[homeController::class,'index'])->name('dashboard.main');
     Route::put('index/{id}/profile',[homeController::class,'edit'])->name('dashboard.profile.edit');
     Route::get('index/{id}/profile', function ($id) {
@@ -195,18 +196,20 @@ Route::group(['prefix' => 'teacher/',], function () {
 });
 
 Route::group(['prefix' => 'students/'], function () { 
- Route::get('index', [studController::class,'index'])->name('stud.index');
- Route::get('advertisments/{cat}', [studController::class,'advertisments'])->name('stud.advertisments');
- Route::get('projects/{cat}', [studController::class,'projects'])->name('stud.projects');
- Route::post('projects/upload', [studController::class,'uploadProject'])->name('upload.project');
- Route::get('posts', [studController::class,'myPosts'])->name('stud.myposts');
- Route::get('profile', [studController::class,'profile'])->name('stud.profile');
+    Route::get('index', [studController::class,'index'])->name('stud.index');
+    Route::get('advertisments/{cat}', [studController::class,'advertisments'])->name('stud.advertisments');
+    Route::get('projects/{cat}', [studController::class,'projects'])->name('stud.projects');
+    Route::post('projects/upload', [studController::class,'uploadProject'])->name('upload.project');
+    Route::get('posts', [studController::class,'myPosts'])->name('stud.myposts');
+    Route::get('profile', [studController::class,'profile'])->name('stud.profile');
+    Route::post('profile/edit', [studController::class,'profileEdit'])->name('edit.profile');
+    Route::get('{id}/lectures', [studController::class,'lectures'])->name('stud.lectures');
 
 
- 
 
 
- 
+
+
 
 });
 
@@ -223,5 +226,16 @@ Route::group(['prefix' => 'posts/'], function () {
 
 
 
+
+});
+
+
+Route::group(['prefix' => 'marks/'], function () {
+    Route::get('index', [marksController::class ,'index'])->name('marks.upload');
+    Route::post('select', [marksController::class ,'selectMatrial'])->name('marks.select.matrial');
+    Route::post('matrial/upload', [marksController::class ,'upload'])->name('upload.matrial');
+    Route::get('marks', [marksController::class ,'marks'])->name('student.marks');
+
+    
 
 });

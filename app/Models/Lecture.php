@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Lecture extends Model
 {
     use HasFactory;
-   protected $fillable = ['links','title','user_id'];
+   protected $fillable = ['links','title','user_id','matrial_id'];
+   public function matrial(){
+       return $this->belongsTo(Matrial::class);
+   }
 
 }

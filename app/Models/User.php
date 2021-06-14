@@ -38,6 +38,10 @@ class User extends Authenticatable
  {
      return $this->belongsToMany(Project::class)->withPivot('path');
  }
+ public function marks(){
+    return $this->hasMany('App\Models\Mark','user_id','id_student');
+
+ }
 
 
 
@@ -67,7 +71,8 @@ class User extends Authenticatable
         'password',
         'role_id',
         'category_id',
-        'id_student'
+        'id_student',
+        'photo'
     ];
 
     /**

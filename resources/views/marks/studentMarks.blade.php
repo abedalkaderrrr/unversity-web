@@ -2,8 +2,10 @@
 
 @section('content')
 
-<!--start nav--> 
-<nav class="navbar navbar-expand-lg navbar-light main-page-teacher">
+
+
+ <!--start nav--> 
+ <nav class="navbar navbar-expand-lg navbar-light main-page-teacher">
   <div class="container">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,27 +42,60 @@
     </div>
   </nav>
  <!-- end nav-->
- <div class="container total-n text-center">
-     <div class="advertisting " >
-         <div class="tital text-center">
-            <h1 class="main-header"> الإعلانات </h1>
 
-         </div>
-        
-        @foreach ($advertisments as $item)
-        <div class="adver">
-            
-            <h2 class="secandry-header"> {{$item->title}} </h2>
-            <h5 class="secandry-tital">{{$item->updated_at->diffForHumans()}}</h5>
-            <p class="adver-p">{{$item->content}}</p>
- 
-         </div>
-        @endforeach
-        
 
-     </div>
+<div class="container text-center page-mark">
+    <!-- بداية الترويسة -->
+    <div class="row">
+        <div class="col ta">
+            <br>
+            <h4>{{Auth::user()->category->name}}</h4>
+        </div>
+        <div class="col ta">
+            <h4>السنة الدراسية</h4>
+            <h4> {{Auth::user()->category->year}} </h4>
+        </div>
+        <div class="col ta">
+            <h4>
+                الرقم الامتحاني<br>
+                 {{Auth::user()->id_student}}<br>
+                
+            </h4>
+        </div>
 
- </div>
+    </div>
+    <!-- نهاية الترويسة -->
+    <!-- بداية جدول العلامات -->
+    <div class="container-table">
+        <table class="table text-center table-mark" >
+            <thead>
+                <tr>
+                    <td> النتيجة  </td>
+                    <td> العلامة  </td>
+                    <td> المادة </td>
+                 
+                                   
+                </tr>               
+            </thead>
+            <tbody>
+                @foreach ($marks as $mark)
+                <tr>
+                    <td> {{($mark->mark >= 60) ? 'ناجح':  'راسب'}} </td>
+                    <td> {{$mark->mark}} </td>
+                    <td> {{$mark->matrial->name}} </td>
+                   
+                  
+                </tr>
+                @endforeach
+               
+               
+            </tbody>
+        </table>
+
+    </div> 
+    <!-- نهاية جدول العلاملات -->
+</div>
+
 
 
 @endsection

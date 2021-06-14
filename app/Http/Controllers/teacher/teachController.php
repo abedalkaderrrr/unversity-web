@@ -53,21 +53,25 @@ class teachController extends Controller
         return view('teacher.main',['bookings'=> $arr,'days'=>$days,'matrials'=>$matrials,'lectures'=>$lectures ]);
     }
     public function test(Request $request){
+        //dd('test');
     $matrial = Matrial::find($request->section);
     
     $category = Category::where('catId',$matrial->cat_name)->get('id');
-    $car_id = [];
+    $cat_id = [];
     foreach ($category as $item) {
         $cat_id[]=$item->id ;
     }
-    
+   
+ //   dd($cat_id);
     $book = Booking::whereIn('category_id',$cat_id)->where('lecture',$request->day)->where('day',$request->lecture)->get();
+   
     $bookRoom = Booking::where('lecture',$request->day)->where('day',$request->lecture)->get();
     $class = [];
+   
     foreach($bookRoom as $item){
         $class[]= $item->room_id;
     }
-
+   
     $room = Room::whereNotIn('id',$class)->get(['id','name']);
 
 
@@ -127,6 +131,7 @@ class teachController extends Controller
             'user_id' => Auth::id(),
             'title'=> $request->title,
             'links' => $request->links,
+            'matrial_id'=>$request->matrial,
         ]);
         return redirect()->back() ;
     }

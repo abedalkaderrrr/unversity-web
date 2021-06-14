@@ -3,39 +3,41 @@
 @section('content')
 <!--start nav--> 
 <nav class="navbar navbar-expand-lg navbar-light main-page-teacher">
-    <div class="container">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto ">
-          <li class="nav-item">
-            <a class="nav-link" href="advertising.html"> الإعلانات </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              المواد
-            </a>
-            <div class="dropdown-menu text-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item open-test" href="#"> حقول </a>
-                <a class="dropdown-item" href="#"> قواعد </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">برمجة</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="main-page-teacher.html">الصفحة الرئيسية <span class="sr-only">(current)</span></a>
-          </li>
-          <!--<li class="nav-item">
-            <a class="nav-link" href="#"> الصفحة الرئيسية </a>
-          </li>-->
-        </ul>
+  <div class="container">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto ">
        
-      </div>
-      </div>
-    </nav>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{Auth::user()->name}} 
+          </a>
+          <div class="dropdown-menu text-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{route('stud.profile')}}" >الملف الشخصي</a>
+              <a class="dropdown-item"  href="{{ route('logout') }}"  onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">تسجيل الخروج</a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf 
+              </form>
+              
+             
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{{route('teach.main')}}">الصفحة الرئيسية <span class="sr-only">(current)</span></a>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" href="#"> الصفحة الرئيسية </a>
+        </li>-->
+      </ul>
+     
+    </div>
+    </div>
+  </nav>
  <!-- end nav-->  
  <div class=" container total">
     <!--start subject-->
@@ -97,6 +99,21 @@
                                 </div>
                                 
                             </div>
+                            <div class="row point">
+                              <div class="col-9">
+                                <select type="text" id="conten" name="matrial" placeholder="conten.." class=" form-control  ss-model" style="">
+                                  @foreach ($matrials as $matrial)
+                                      <option value="{{$matrial->id}}">{{$matrial->name}}</option>
+                                  @endforeach
+                                </select>
+
+                              </div>
+                              <div class="col-3 ">
+                                  <label for="message-text " class="col-form-label ll-model text-right">  المادة </label>
+
+                              </div>
+                              
+                          </div>
                             <button type="submit" class="btn btn-secondary" data-dismiss="modal" style="margin-right: 44%;"> رفع </button>
 
                           </div>
@@ -121,7 +138,8 @@
                                 <thead>
                                     <tr>
                                         <td>  </td>
-                                        <td class=""> العنوان </td>                   
+                                        <td class=""> العنوان </td> 
+                                        <td class=""> المادة </td>                  
                                     </tr>               
                                 </thead>
                                 <tbody>
@@ -137,6 +155,7 @@
                                          <button type="submit" class="btn btn-danger" data-dismiss="modal" style="margin-right: 44%;"> حذف </button> 
                                         </td>
                                       </form>
+                                      <td>{{$item->matrial->name}}</td>
                                       <td class="">{{$item->title}}</td> 
                                                       
                                   </tr>

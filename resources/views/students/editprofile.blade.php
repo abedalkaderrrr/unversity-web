@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="body-login">
+    <form action="{{route('edit.profile')}}" method="POST" enctype="multipart/form-data">@csrf
 <div class="container login text-center">
     <!--<div class="row login text-center">-->
         <!--<h1 > تسجيل الدخول </h1>
@@ -28,16 +29,16 @@
         <div class="form-group">
             <!--<i class="fa fa-car"></i>-->
             <p><label for="" style="cursor: pointer;" class="col-form-label "> ايميل المستخدم </label></p>
-            <input type="email" class="form-control" placeholder="اسم المستخدم" style="text-align: right;">
+            <input type="email" class="form-control" name="email" value="{{Auth::user()->email}}" placeholder="اسم المستخدم" style="text-align: right;">
 
         </div>
         <div class="form-group">
             <p><label for="" style="cursor: pointer;" class="col-form-label ">  كلمة المرور القديمة</label></p>
-            <input type="password" name="password" placeholder="كلمة المرور" class="form-control" style="text-align: right;">
+            <input type="password" name="oldpassword" placeholder="كلمة المرور" class="form-control" style="text-align: right;">
         </div>
         <div class="form-group">
             <p><label for="" style="cursor: pointer;" class="col-form-label ">  كلمة المرور الجديده</label></p>
-            <input type="password" name="password" placeholder="كلمة المرور" class="form-control" style="text-align: right;">
+            <input type="password" name="newpassword" placeholder="كلمة المرور" class="form-control" style="text-align: right;">
         </div>
         <!--<p><label for="file" style="cursor: pointer;" class="col-form-label l-model"> </label></p>-->
         <div class="">
@@ -46,6 +47,7 @@
         
     <!--</div>-->
 </div>
+</form>
 </div>
 
 
