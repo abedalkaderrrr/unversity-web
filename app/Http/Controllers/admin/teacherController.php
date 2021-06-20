@@ -23,14 +23,16 @@ class teacherController extends Controller
       }
   
       public function addDoctor(Request $request){
+          dd($request['id_student']);
           $request = $this->vailateAddDoctor($request);
           $user= User::create([
-             //  'id_student'=> $request['id_student'] ,
+             
                'name'=>$request['name'] , 
                'email'=> $request['email'],
                'password'=> bcrypt($request['password']),
                'role_id'=> 'doctor' ,
                'category_id'=> 1,
+               'id_student'=>$request['id_student'],
                 ]);
           return  $this->success($user,'add doctor',200);
   
@@ -44,6 +46,7 @@ class teacherController extends Controller
                   'name'=> 'required',
                   'email'=> 'required|email|unique:users',
                   'password'=> 'required|min:6',
+                  'id_student'=>'integer|unique:users'
                   //'role_id'=> 'required|integer',
                   //'category_id'=> 'required|integer',
               ]
@@ -99,7 +102,7 @@ class teacherController extends Controller
                 
                 $request = $this->vailateAddTeacher($request);
                User::create([
-             'id_student'=> 0 ,
+             'id_student'=> null ,
              'name'=>$request['name'] , 
              'email'=> $request['email'],
              'password'=> bcrypt($request['password']),
