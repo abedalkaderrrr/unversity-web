@@ -32,6 +32,7 @@ use App\Http\controllers\teacher\teachController ;
 Route::get('/', function () {
     return view('welcome');
 });
+//test
 
 Auth::routes();
 
