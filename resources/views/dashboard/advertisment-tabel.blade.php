@@ -7,12 +7,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>advertisement-tabel</title>
     <!-- Scripts -->
-    <script src="{{ asset('js/dashboard/jquery-1.11.1.min.js') }}" defer></script>
-<script src="{{ asset('js/dashboard/bootstrap.js') }}" defer></script>
+
 
     <!-- Fonts -->
-    <!-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
+    
 
     <!-- Styles -->
     
@@ -40,7 +38,7 @@
       .tan-tabel {
         margin-top: 2%;
       }
-         /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - بداية*/
+      /* إصلاحات التنسيق للجدول الخاصة بالريسبونس - بداية*/
     /*@media (min-width: 0px) and (max-width: 535px) {
       .header-part {
        
@@ -375,6 +373,8 @@
     </div>  <!---->
      
     </div>
+    <script src="{{ asset('js/dashboard/jquery-1.11.1.min.js') }}" ></script>
+    <script src="{{ asset('js/dashboard/bootstrap.js') }}" ></script>
     <script>
       function openNav() {
         document.getElementById("mySidebar").style.width = "250px";

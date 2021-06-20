@@ -120,6 +120,16 @@
      transition: margin-left .5s;
      padding: 16px;
    }
+   .alert {
+      text-align: right;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    margin: 59px 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50%;
+    }
    
    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
    @media screen and (max-height: 450px) {
@@ -128,6 +138,14 @@
    }
      </style>
    <body>
+    @if (session()->has('status'))
+    <div class="alert alert-success alert-dismissible" role="alert">
+        {{ session('status') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endif
     <div class="wrapper">  
         <!-- start navbar -->
          <nav class="navbar navbar-default navbar-inverse navbar-fixed-top " role="navigation">

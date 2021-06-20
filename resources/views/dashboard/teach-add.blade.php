@@ -247,6 +247,15 @@
                         <div class="col-md-1"></div>
                     </div>
                     <div class="row">
+                      <div class="col-md-6 col-md-offset-2" >
+                          <input type="text" id="email" name="id_student" placeholder="id..">
+                      </div>
+                      <div class="col-md-3"  >
+                          <label for="email">  رقم الاستاذ </label>
+                      </div>
+                      <div class="col-md-1"></div>
+                  </div>
+                    <div class="row">
                         <div class="col-md-6 col-md-offset-2" >
                             <input type="email" id="email" name="email" placeholder="email..">
                         </div>
