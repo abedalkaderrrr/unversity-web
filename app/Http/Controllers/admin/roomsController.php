@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Booking;
 use Illuminate\Http\Request;
 use App\Models\Room ;
 
@@ -33,8 +34,13 @@ class roomsController extends Controller
     }
 
     public function deleteRooms($id){
+       $booking = Booking::where('room_id',$id)->get();
        
-
+        if($booking->isNotEmpty()){
+        
+            return redirect()->back()->with(['status'=>'هذه القاعة تحتوي على حجوزات']);
+        }
+        
         Room::find($id)->delete();
         return  redirect()->back();
     }

@@ -47,7 +47,7 @@
         <a href="{{route('teach.student.get',['category'=>$category])}}" class="led"> الطلاب </a>
       </div>
       <div class="col-6">
-        <a href="montada.html" class="led"> المنتدى </a>
+        <a href="{{route('posts.index',['id'=>$matrial])}}" class="led"> المنتدى </a>
       </div>
     </div>
   </div>

@@ -24,7 +24,7 @@ class teachController extends Controller
         $lectures = Auth::user()->lectures;
         //dd($lectures);
         //dd($matrials);
-        $book = Booking::where('user_id',1)->get();
+        $book = Booking::where('user_id',Auth::id())->get();
        // dd($book->lecture);
        $arr= [];
         for ($i=1 ; $i <6 ; $i++) { 
@@ -140,6 +140,7 @@ class teachController extends Controller
         return redirect()->back();
     }
     public function projectAdver($category,$matrial){
+        //dd($matrial);
         $advertisments = Advertisment::where('user_id',Auth::id())->where('slice',$category)->get();
         $projects = Project::where('user_id',Auth::id())->where('matrial_id',$matrial)->get();
 

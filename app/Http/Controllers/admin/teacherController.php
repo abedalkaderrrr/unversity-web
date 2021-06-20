@@ -50,6 +50,12 @@ class teacherController extends Controller
           );}
       
           public function deleteDoctor($id){
+            
+            $mat=DB::select("select * from matrial_user where user_id = $id ");
+           // dd(empty($mat));
+           if(! empty($mat)){
+            return redirect()->back()->with(['status'=>'قم بحذف المواد المرتبطة بالاستاذ قبل حذفه']);
+           }
               $user = User::where('id',$id)->delete();
               return redirect()->back();
               //return  $this->success([],'delete success',200);

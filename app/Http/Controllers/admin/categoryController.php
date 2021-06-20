@@ -33,9 +33,13 @@ class categoryController extends Controller
     }
 
     public function deleteCategory($id){
-
+      try {
         Category::find($id)->delete();
       return redirect()->back();
+      } catch (\Throwable $th) {
+        return redirect()->back()->with(['status'=>'يجب حذف الطلاب والحجوزات والقاعات المتعلقة بالقسم']);
+      }
+       
     }
     public function  editCategory($id,Request $request){
      $category = Category::where('id',$id)->first();

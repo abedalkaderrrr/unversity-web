@@ -155,8 +155,8 @@
                                          <button type="submit" class="btn btn-danger" data-dismiss="modal" style="margin-right: 44%;"> حذف </button> 
                                         </td>
                                       </form>
-                                      <td>{{$item->matrial->name}}</td>
-                                      <td class="">{{$item->title}}</td> 
+                                      <td>{{$item->title}}</td>
+                                      <td class="">{{$item->matrial->name}}</td> 
                                                       
                                   </tr>
                                     @endforeach
