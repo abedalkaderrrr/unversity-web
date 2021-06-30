@@ -1,0 +1,700 @@
+/*  start part-edit*/
+.edit {
+  border: 2px solid rgb(247, 240, 240);
+
+  margin: auto;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+}
+.contain input {
+  width: 900px;
+  margin-bottom: auto;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: 50px;
+}
+.edit h1 {
+  font-weight: bold;
+
+  color: #636f83;
+  text-shadow: +2px +2px 5px;
+}
+.edit label {
+  font-size: 20px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  color: rgb(155, 151, 151);
+}
+
+/*  end part-edit*/
+/* start student table */
+
+/* start form*/
+* {
+  box-sizing: border-box;
+}
+.col-25 label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: rgb(89, 101, 212);
+  font-size: 23px;
+  font-weight: 600;
+  /*text-shadow: 5px 5px 8px;*/
+}
+
+.col-60 input[type="text"],
+.col-60 input[type="email"],
+.col-60 input[type="date"],
+.col-60 input[type="password"],
+.col-60 select,
+.col-60 textarea {
+  float: right;
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  height: 45px;
+}
+.col-60 select,
+.col-60 input,
+.col-60 textarea {
+  color: #729cc0;
+  background: white;
+  border: 2px solid #c4befa;
+  box-shadow: +5px +5px 8px;
+}
+input[type="submit"] {
+  margin: 10px;
+  margin-right: 48%;
+  color: white;
+  padding: 10px;
+  background: #3399ff;
+  border: 2px solid #3399ff;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover {
+  background-color: #321fdb;
+}
+.form {
+  border-radius: 5px;
+  /* background-color: #f2f2f2;*/
+  background: white;
+  padding: 20px;
+  /* background: url("e4.jpg");
+    background-size:cover ;*/
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-bottom: 10px;
+  padding: 5px;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 210;
+  color: rgb(89, 101, 212);
+  text-shadow: +5px +5px 8px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  /*margin: 20px;*/
+  /* margin-bottom: 30px;*/
+  color: #321fdb;
+  text-shadow: +2px +2px 5px;
+  /* margin-right: 200px;*/
+  margin: 30px;
+}
+
+.col-15 {
+  width: 15%;
+}
+
+.col-60 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 600px) {
+  .col-15, .col-70, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    }
+    }*/
+@media (min-width: 500px) and (max-width: 767px) {
+  .form {
+    width: 570px;
+    background: white;
+    /* padding-right: 50px;*/
+  }
+  .col-60 {
+    width: 60%;
+    margin: auto;
+  }
+  .col-25 {
+    width: 30%;
+    margin: auto;
+  }
+  .col-15 {
+    width: 5%;
+  }
+  .col-60 input[type="text"],
+  .col-60 input[type="email"],
+  .col-60 input[type="date"],
+  .col-60 input[type="password"],
+  .col-60 select,
+  .col-60 textarea {
+    width: 100%;
+  }
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  input[type="submit"] {
+    margin-right: 55%;
+  }
+}
+@media (min-width: 0px) and (max-width: 551px) {
+  .teacher-ad {
+    width: 450px;
+    background: white;
+    /* padding-right: 50px;*/
+  }
+  .col-60 {
+    width: 58%;
+    margin: auto;
+  }
+  .col-25 {
+    width: 40%;
+    margin: auto;
+  }
+  .col-15 {
+    width: 1%;
+  }
+  .col-60 input[type="text"],
+  .col-60 input[type="email"],
+  .col-60 input[type="date"],
+  .col-60 input[type="password"],
+  .col-60 select,
+  .col-60 textarea {
+    width: 100%;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  input[type="submit"] {
+    font-size: 15px;
+    font-weight: 300px;
+    margin-right: 45%;
+  }
+  .col-25 label {
+    font-size: 18px;
+  }
+}
+/* end form*/
+
+/* start style login */
+
+/*.login {
+  border: 2px solid rgb(247, 240, 240);
+  margin: auto;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  height: 450px;
+  width: 700px;
+}
+.login h1 {
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #636f83;
+  text-shadow: +2px +2px 5px;
+  padding: 5px;
+}
+
+.login p {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgb(155, 151, 151);
+  padding: 5px;
+}
+
+.login .field {
+  margin-bottom: 25px;
+}
+
+.login button {
+  margin-left: 180px;
+  margin-top: 10px;
+  margin: 30px;
+  padding: 5px;
+  float: left;
+  width: 150px;
+  background-color: #321fdb;
+  color: rgb(250, 249, 252);
+}
+.login a {
+  float: right;
+
+  margin-top: 15px;
+  margin-right: 180px;
+  margin: 30px;
+  padding: 5px;
+  float: right;
+  width: 150px;
+  text-decoration: none;
+
+  color: #321fdb;
+  font-size: 18px;
+  font-weight: 100px;
+}
+.login a:hover {
+  font-size: 18px;
+  font-weight: 100px;
+}*/
+/* start style login */
+
+//* start section staistice */
+
+.statistics {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #ddd;
+}
+.statistics .hagez {
+  background-color: #e55353;
+}
+.statistics .classes {
+  background-color: #f9b115;
+}
+.statistics .teachers {
+  background-color: #39f;
+}
+.statistics .students {
+  background-color: #321fdb;
+}
+.statistics .col-md-3 {
+  padding: 50px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  height: 24%;
+  width: 24%;
+  color: #fff;
+}
+.statistics .col-md-3 p {
+  letter-spacing: 1px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.statistics .col-md-3 span {
+  font-size: 25px;
+  font-weight: 1500px;
+}
+/* end section staistice */
+
+/* start  bill*/
+.bill {
+  /* height: 500px;*/
+  height: 432px;
+  padding-right: 20px;
+  background: rgb(255 255 255 / 43%);
+  margin-top: 30px;
+  /* margin-bottom: 30px;*/
+  border: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+.bill h1 {
+  color: black;
+
+  text-shadow: +2px -2px 3px #151313;
+}
+.bill .bill1 {
+  background: #fff;
+}
+.bill h3 {
+  display: inline;
+  float: right;
+  padding-top: 10px;
+  color: black;
+}
+.bill span {
+  float: left;
+  padding: 15px;
+  padding-left: 55px;
+}
+.bill span:hover {
+  color: #0d0d0d;
+}
+/*end bill*/
+
+/* الشريط الجانبي المعتمد -بداية نظامية */
+/* Start sidebar links */
+/* Style the sidebar - fixed full height */
+.sidebar {
+  height: 100%;
+  width: 170px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #555;
+
+  overflow-x: hidden;
+  padding-top: 16px;
+  float: right;
+
+  font-weight: 600px;
+  padding-top: 60px;
+}
+/*.sidebar:hover {
+  width: 60px;
+  overflow-x: hidden;
+}*/
+
+.sidebar a {
+  /* padding: 6px 8px 6px 16px;*/
+  padding: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  text-shadow: 2px 2px 9px white;
+  ~webkit-transition: font-size 0.5s ease;
+  ~moz-transition: font-size 0.5s ease;
+  ~o-transition: font-size 0.5s ease;
+  transition: font-size 0.5s ease;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover,
+.sidebar a:focus {
+  color: black;
+  font-size: 21px;
+  font-weight: 600;
+  text-shadow: 2px 2px 9px #222;
+  box-shadow: 4px 4px 9px;
+}
+.sidebar a:focus {
+  color: black;
+  font-size: 21px;
+  font-weight: 600;
+  text-shadow: 2px 2px 9px #222;
+  box-shadow: 4px 4px 9px;
+}
+.sidebar span:hover {
+  color: #f1f1f1;
+}
+
+/* Style the main content */
+.main {
+  /* margin-left: 160px; /* Same as the width of the sidenav */
+  margin-left: 20px;
+  padding: 0px 10px;
+}
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+/* end sidebar links */
+/* start style sidebar */
+
+/* Style the form - display items horizontally */
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+/* Add some margins for each label */
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+/* Style the input fields */
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Style the submit button */
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* end style sidebar */
+
+/* الشريط الجانبية المعتمد-نهاية نظامي*/
+
+/* start nav 
+.navbar {
+  background: #555;
+  height: 55px;
+  border: 2px solid #555;
+  box-shadow: 4px 4px 9px;
+  color: white;
+  font-size: 25px;
+  font-weight: 600px;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+  font-size: 20px;
+  font-weight: 600px;
+  text-shadow: 2px 2px 9px white;
+  ~webkit-transition: font-size 0.5s ease;
+  ~moz-transition: font-size 0.5s ease;
+  ~o-transition: font-size 0.5s ease;
+  transition: font-size 0.5s ease;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: black;
+  font-size: 23px;
+  font-weight: 600px;
+  text-shadow: 2px 2px 9px #222;
+  box-shadow: 4px 4px 9px;
+}
+.dropdown-menu {
+  background: #555;
+  min-width: 138px;
+}
+.dropdown-menu > li > a {
+  color: white;
+  padding: 7px;
+  ~webkit-transition: padding 0.5s ease;
+  ~moz-transition: padding 0.5s ease;
+  ~o-transition: padding 0.5s ease;
+  transition: padding 0.5s ease;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background: #555;
+  padding: 9px;
+  color: black;
+}
+
+/*.navbar-inverse .navbar-nav > li > a:focus{
+  color:#321fdb;
+  background:white;
+   font-size: 23px;
+  font-weight: 600px;
+  text-shadow: 2px 2px 9px #321fdb;
+    box-shadow: 4px 4px 9px;
+
+}  */
+
+/* start nav */
+
+.information {
+  /* margin-top: 15px;
+  margin-bottom: 80px;*/
+}
+
+/*.inf2 {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  padding-top: 5px;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+}
+.inf2 button {
+  background: #3399ff;
+  border: 2px solid #3399ff;
+  border-radius: 8px;
+}*/
+/*.inf2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 180;
+  color: white;
+  background: #3399ff;
+  text-align: center;
+  border-radius: 8px;
+}
+.inf2 button {
+  color: white;
+  text-decoration: none;
+  background: #3399ff;
+  border: 2px solid #3399ff;
+}
+.inf2 a {
+  color: white;
+  text-decoration: none;
+  background: #3399ff;
+}
+*/
+
+.inf2 {
+  margin-bottom: 10px;
+}
+.inf1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 180;
+  color: white;
+  background: #3399ff;
+  text-align: center;
+  border-radius: 8px;
+}
+.inf1 a {
+  color: white;
+  text-decoration: none;
+  background: #3399ff;
+}
+
+.inf3 {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  padding-top: 5px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: 180;
+
+  color: #636f83;
+}
+.inf3 select {
+  color: #729cc0;
+  background: white;
+  padding: 5px;
+  border: 2px solid #c4befa;
+  box-shadow: +5px +5px 8px;
+}
+
+.title {
+  /*border: 200px   solid transparent;
+    border-image: url(../esraa.jpg) 70 fill;*/
+  font-size: 50px;
+  font-weight: 100;
+  color: #256c80;
+}
+thead td {
+  font-size: 40px;
+  font-weight: 400px;
+  background: #256c80;
+  color: #fff;
+  text-align: -webkit-center;
+}
+tbody td {
+  font-size: 20px;
+  font-weight: 70px;
+  background: #7bacb9;
+  color: #ffff;
+  text-align: center;
+}
+/* end student table */
+tr,
+td {
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  padding: 0px;
+  width: 4px;
+  height: 20px;
+}
+table {
+  size: 1500px;
+  width: 100%;
+
+  color: #040404;
+}
+tbody {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  margin-top: 5px;
+}
+.header-part {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+
+  color: #321fdb;
+  text-shadow: +2px +2px 5px;
+}
+
+thead {
+  background: #321fdb;
+  color: #eff1f1;
+  font-size: 22px;
+  font-weight: 300px;
+}
+thead td {
+  padding: 10px;
+}
+.name {
+  color: #787171;
+}
+tbody {
+  background: white;
+  font-size: 17px;
+  font-weight: 180px;
+  color: #729cc0;
+}
+.id {
+  color: #428bca;
+}
+td a {
+  text-decoration: none;
+  margin-right: 5px;
+  color: white;
+  padding: 4px;
+  background: #2eb85c;
+}
+td a:hover {
+  color: black;
+}
+.button {
+  margin-left: 310px;
+}
+/*end tabel*/
