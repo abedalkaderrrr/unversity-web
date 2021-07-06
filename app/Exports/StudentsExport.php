@@ -23,13 +23,13 @@ class StudentsExport implements FromCollection , WithHeadings
     }
     public function collection()
     {
-       $users =DB::table('users')
+        $users =DB::table('users')
                 ->join('categories', 'users.category_id', '=', 'categories.id')
                 ->where('categories.catId',$this->category)->whereNotIn('users.role_id',['doctor'])
                 ->select('users.id_student', 'users.name')
                 ->get();
                 
-         return $users;
+        return $users;
          
     }
     public function headings(): array

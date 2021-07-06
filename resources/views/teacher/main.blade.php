@@ -267,7 +267,7 @@
             @csrf
             <div class="form-group">
               <label for="recipient-name" class="col-form-label l-model"> المادة </label>
-              <select class="form-control s-model section" name="matrial" id="recipient-name" >
+              <select required class="form-control s-model section" name="matrial" id="recipient-name" >
                
                @foreach ($matrials as $item)
                <option value="{{$item->id}}"> {{$item->name}} </option>
@@ -286,14 +286,14 @@
             
             <div class="form-group">
               <label for="message-text" class="col-form-label l-model "> الشعبة </label>
-              <select class="form-control s-model sectionSelected" name="category" id="recipient-name">
+              <select required class="form-control s-model sectionSelected" name="category" id="recipient-name">
                 <option value="">غير محدد</option>
                 
             </select>
             </div>
             <div class="form-group">
               <label for="message-text" class="col-form-label l-model"> القاعة </label>
-              <select class="form-control s-model roomSelected" name="room" id="recipient-name">
+              <select required class="form-control s-model roomSelected" name="room" id="recipient-name">
                 
             </select>
             </div>
