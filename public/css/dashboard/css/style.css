@@ -37,17 +37,19 @@ table {
   float: right;
 }
 .student-form select {
-  color: #729cc0;
+  color: #5c84af;
   background: white;
   padding: 5px;
-  border: 2px solid #c4befa;
+  border: 1px solid #c4befa;
+  font-size:24px ;
+  font-weight: bold;
   /*box-shadow: +5px +5px 8px;*/
 }
 .student-form label {
   padding: 12px 12px 12px 0;
   display: inline-block;
   color: #488fcb;
-  font-size: 23px;
+  font-size: 26px;
   font-weight: 600;
   /*text-shadow: 5px 5px 8px;*/
 }
@@ -61,8 +63,8 @@ thead td {
 tbody {
   /* background: white;*/
   background: #fff;
-  font-size: 20px;
-  font-weight: 180px;
+  font-size: 25px;
+  font-weight:bold;
   color: #729cc0;
 }
 
@@ -272,8 +274,8 @@ strong {
   color: #7685bb;
   /*color: #290037;*/
   /*color: #3101f6;*/
-  font-size: 23px;
-  font-weight: 500;
+  font-size: 27px;
+  font-weight: 600;
   /* text-shadow: 5px 5px #ecc7f9;*/
 }
 
@@ -288,20 +290,20 @@ strong {
   padding: 5px;
   border-radius: 4px;
   resize: vertical;
-  height: 45px;
+  height: 55px;
   margin-top: 10px;
   margin-bottom: 15px;
-  color: #729cc0;
-  background: #7685bb42;
-  border: 2px solid #7685bb42;
+  color: #ffffff;
+  background: #5a80b142;
+  border: 3px solid #7685bb42;
   /*background: #e1a4f69e;
   border: 2px solid #ecc7f9;*/
   /*    background: #afb1ed;
     border: 2px solid #c1afed;*/
-  color: #729cc0;
+  color: #556f88;
   /*color: #290037;*/
-  font-size: 25px;
-  font-weight: 900px;
+  font-size: 33px;
+  font-weight:bold;
   text-align: center;
 }
 .add input[type="submit"] {
@@ -315,7 +317,7 @@ strong {
   border: 2px solid #290037;*/
   /*background: #3506f6;
     border: 2px solid #3506f6;*/
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
@@ -364,7 +366,7 @@ strong {
   .add input[type="submit"] {
     margin-right: 45%;
     padding: 4px;
-    font-size: 13px;
+    font-size: 20px;
   }
 
   .style-container {
@@ -397,7 +399,7 @@ strong {
   .add input[type="submit"] {
     margin-right: 45%;
     padding: 8px;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .style-container {
@@ -485,6 +487,7 @@ strong {
   box-shadow: 2px 2px 2px #488fcb;
   height: 40px;
   font-size: 20px;
+  font-weight: bold;
   padding: 0px 50px;
 }
 .search:focus {
