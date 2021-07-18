@@ -239,4 +239,81 @@ class teachController extends Controller
         // We return the file immediately after download
         return response()->download($zip_file);
     }
+
+    public function searchTeacher(Request $request)
+    {
+        $book = Booking::where('user_id', $request->id)->get();
+        $user = User::where('id', $request->id)->first();
+        // dd($book->lecture);
+        $arr = [];
+        for ($i = 1; $i < 6; $i++) {
+            for ($j = 1; $j < 6; $j++) {
+
+                $arr[$i][$j] = null;
+            }
+        }
+
+
+        foreach ($book as $item) {
+            // dd($item);
+            $day = $item->day;
+            $lec = $item->lecture;
+            $arr[$day][$lec] = $item;
+        }
+        $days[1] = 'الاحد';
+        $days[2] = 'الاثنين';
+        $days[3] = 'الثلاثاء';
+        $days[4] = 'الاربعاء';
+        $days[5] = 'الخميس';
+
+        // dd(Auth::id());
+        $teachers = User::where('role_id', 'doctor')->get();
+        return view('teacher.searchByteacher', ['teachers' => $teachers, 'bookings' => $arr, 'days' => $days, 'user' => $user]);
+    }
+
+    public function searchTeacherIndex()
+    {
+        $teachers = User::where('role_id', 'doctor')->get();
+
+        return view('teacher.searchByteacher', ['teachers' => $teachers]);
+    }
+
+
+    public function searchRoom(Request $request)
+    {
+        $book = Booking::where('room_id', $request->id)->get();
+        $user = Room::where('id', $request->id)->first();
+        // dd($book->lecture);
+        $arr = [];
+        for ($i = 1; $i < 6; $i++) {
+            for ($j = 1; $j < 6; $j++) {
+
+                $arr[$i][$j] = null;
+            }
+        }
+
+
+        foreach ($book as $item) {
+            // dd($item);
+            $day = $item->day;
+            $lec = $item->lecture;
+            $arr[$day][$lec] = $item;
+        }
+        $days[1] = 'الاحد';
+        $days[2] = 'الاثنين';
+        $days[3] = 'الثلاثاء';
+        $days[4] = 'الاربعاء';
+        $days[5] = 'الخميس';
+
+        // dd(Auth::id());
+        $rooms = Room::all();
+        return view('teacher.searchByroom', ['rooms' => $rooms, 'bookings' => $arr, 'days' => $days, 'user' => $user]);
+    }
+
+    public function searchRoomIndex()
+    {
+        $rooms = Room::all();
+
+        return view('teacher.searchByroom', ['rooms' => $rooms]);
+    }
 }
