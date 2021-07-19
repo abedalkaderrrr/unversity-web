@@ -101,7 +101,7 @@
                             </div>
                             <div class="row point">
                               <div class="col-9">
-                                <select type="text" id="conten" name="matrial" placeholder="conten.." class=" form-control  ss-model" style="">
+                                <select type="text" id="conten" name="matrial" placeholder="conten.." class=" form-control  ss-model" style="border: 2px solid #2900378a; box-shadow: 2px 2px 5px #2900378a;width: 80%;margin-left: auto;margin-right: 1%;">
                                   @foreach ($matrials as $matrial)
                                       <option value="{{$matrial->id}}">{{$matrial->name}}</option>
                                   @endforeach
