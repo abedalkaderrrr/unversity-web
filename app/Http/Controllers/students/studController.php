@@ -19,118 +19,121 @@ use Illuminate\Support\Facades\Hash;
 
 class studController extends Controller
 {
-    public function index(){
-       
+    public function index()
+    {
+
         $cat_name = Category::find(Auth::user()->category_id)->catId;
-        $matrial = Matrial::where('cat_name',$cat_name)->get();
-     //   dd($matrial);
-     $book = Booking::where('category_id',Auth::user()->category_id)->get();
-     
-       // dd($book->lecture);
-       $arr= [];
-        for ($i=1 ; $i <6 ; $i++) { 
-            for ($j=1 ; $j <6 ; $j++) { 
-                
-                $arr[$i][$j] = null ;
-            
+        $matrial = Matrial::where('cat_name', $cat_name)->get();
+        //   dd($matrial);
+        $book = Booking::where('category_id', Auth::user()->category_id)->get();
+
+        // dd($book->lecture);
+        $arr = [];
+        for ($i = 1; $i < 6; $i++) {
+            for ($j = 1; $j < 6; $j++) {
+
+                $arr[$i][$j] = null;
             }
         }
 
-      
-       foreach ($book as $item) {
-          // dd($item);
-           $day = $item->day ;
-           $lec = $item->lecture ;
-           $arr[$day][$lec] = $item;
 
-       }   
-      // dd($arr);
-       $days[1]= 'الاحد';
-       $days[2]= 'الاثنين';
-       $days[3]= 'الثلاثاء';
-       $days[4]= 'الاربعاء';
-       $days[5]= 'الخميس'; 
-      
-        return view('students.main',['matrials'=>$matrial,'bookings'=> $arr,'days'=>$days,'category'=>$cat_name]);
+        foreach ($book as $item) {
+            // dd($item);
+            $day = $item->day;
+            $lec = $item->lecture;
+            $arr[$day][$lec] = $item;
+        }
+        // dd($arr);
+        $days[1] = 'الاحد';
+        $days[2] = 'الاثنين';
+        $days[3] = 'الثلاثاء';
+        $days[4] = 'الاربعاء';
+        $days[5] = 'الخميس';
+
+        return view('students.main', ['matrials' => $matrial, 'bookings' => $arr, 'days' => $days, 'category' => $cat_name]);
     }
-    public function  advertisments($category){
-        $advertisments = Advertisment::where('slice','like','%'.$category.'%')->where('period','>',Carbon::now()->format('Y-m-d'))->orderBy('created_at','desc')->get();
-       //dd(Carbon::now() );
-      return  view('students.advertisments',['advertisments'=>$advertisments]);
+    public function  advertisments($category)
+    {
+
+        $advertisments = Advertisment::where('slice', 'like', '%' . $category . '%')->where('period', '>', Carbon::now()->format('Y-m-d'))->orderBy('created_at', 'desc')->get();
+
+        return  view('students.advertisments', ['advertisments' => $advertisments]);
     }
-    public function projects($category){
-       
-      
-        $matrial = Matrial::where('cat_name',$category)->get();
-        
+    public function projects($category)
+    {
+
+
+        $matrial = Matrial::where('cat_name', $category)->get();
+
         $arr = [];
-        foreach($matrial as $item){
+        foreach ($matrial as $item) {
             $arr[] = $item->id;
         }
-        
-        $projects = Project::whereIn('matrial_id',$arr)->get();
-        
+
+        $projects = Project::whereIn('matrial_id', $arr)->get();
+
         //dd();
-        return view('students.projects',['projects'=>$projects]);
-      
-        
+        return view('students.projects', ['projects' => $projects]);
     }
 
 
 
 
-    public function uploadProject(Request $request){
+    public function uploadProject(Request $request)
+    {
         $user = User::find(Auth::id());
-        $check = DB::table('project_user')->where('user_id',Auth::id())->where('project_id',$request->id)->first();
-        
-      if($check){
-       DB::table('project_user')->where('id',$check->id)->delete();
-      }
-        
-       
-        $filenameWithExt = $request->file('project')->getClientOriginalName ();
+        $check = DB::table('project_user')->where('user_id', Auth::id())->where('project_id', $request->id)->first();
+
+        if ($check) {
+            DB::table('project_user')->where('id', $check->id)->delete();
+        }
+
+
+        $filenameWithExt = $request->file('project')->getClientOriginalName();
         $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
         $extension = $request->file('project')->getClientOriginalExtension();
-        $fileNameToStore = $filename. '_'. time().'.'.$extension;
+        $fileNameToStore = $filename . '_' . time() . '.' . $extension;
         $path = $request->file('project')->storeAs('public/project_files', $fileNameToStore);
-        $user->projects()->attach($request->id,['path'=>$fileNameToStore]);
-        
-        return redirect()->back() ;
+        $user->projects()->attach($request->id, ['path' => $fileNameToStore]);
 
+        return redirect()->back();
     }
-    public function myPosts(){
-        $posts = Post::where('user_id',Auth::id())->orderBy('updated_at','desc')->get();
-        return view('students.myPosts',['posts'=>$posts]);
+    public function myPosts()
+    {
+        $posts = Post::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        return view('students.myPosts', ['posts' => $posts]);
     }
-    public function profile(){
-       // dd(public_path());
+    public function profile()
+    {
+        // dd(public_path());
         return view('students.editprofile');
     }
-    public function  profileEdit(Request $request){
-        $fileNameToStore = null ;
-        if(! is_null($request->file('image'))){
-       $filenameWithExt = $request->file('image')->getClientOriginalName ();
-     
-       $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-       $extension = $request->file('image')->getClientOriginalExtension();
-       $fileNameToStore = $filename. '_'. time().'.'.$extension;
-       
-      // dd($fileNameToStore);
-       $path = $request->file('image')->storeAs('public/photos', $fileNameToStore);
+    public function  profileEdit(Request $request)
+    {
+        $fileNameToStore = null;
+        if (!is_null($request->file('image'))) {
+            $filenameWithExt = $request->file('image')->getClientOriginalName();
+
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $fileNameToStore = $filename . '_' . time() . '.' . $extension;
+
+            // dd($fileNameToStore);
+            $path = $request->file('image')->storeAs('public/photos', $fileNameToStore);
         }
-       // dd($fileNameToStore);
+        // dd($fileNameToStore);
         $user = User::find(Auth::id());
         $user->update([
-            'photo'=> ($fileNameToStore == null) ? $user->photo : $fileNameToStore , 
-            'password'=>(Hash::make($request->oldpassword) == $user->password) ? Hash::make($request->newpassword) :$user->password ,
+            'photo' => ($fileNameToStore == null) ? $user->photo : $fileNameToStore,
+            'password' => Hash::check($request->oldpassword, $user->password) ? Hash::make($request->newpassword) : $user->password,
             'email' => $request->email,
         ]);
-       // dd($user);
+        // dd($user);
         return redirect()->back();
-
     }
-    public function lectures($id){
-        $lectures = Lecture::where('matrial_id',$id)->get();
-        return view('students.lectures',['lectures'=>$lectures]);
+    public function lectures($id)
+    {
+        $lectures = Lecture::where('matrial_id', $id)->get();
+        return view('students.lectures', ['lectures' => $lectures]);
     }
 }

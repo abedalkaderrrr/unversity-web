@@ -37,6 +37,7 @@ table {
     float: right;
 }
 .student-form select {
+<<<<<<< HEAD
     color: #729cc0;
     background: white;
     padding: 5px;
@@ -50,6 +51,23 @@ table {
     font-size: 23px;
     font-weight: 600;
     /*text-shadow: 5px 5px 8px;*/
+=======
+  color: #5c84af;
+  background: white;
+  padding: 5px;
+  border: 1px solid #c4befa;
+  font-size:24px ;
+  font-weight: bold;
+  /*box-shadow: +5px +5px 8px;*/
+}
+.student-form label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: #488fcb;
+  font-size: 26px;
+  font-weight: 600;
+  /*text-shadow: 5px 5px 8px;*/
+>>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
 
 thead td {
@@ -59,11 +77,19 @@ thead td {
     color: #787171;
 }
 tbody {
+<<<<<<< HEAD
     /* background: white;*/
     background: #fff;
     font-size: 20px;
     font-weight: 180px;
     color: #729cc0;
+=======
+  /* background: white;*/
+  background: #fff;
+  font-size: 25px;
+  font-weight:bold;
+  color: #729cc0;
+>>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
 
 td a {
@@ -267,6 +293,7 @@ strong {
 }
 
 .add label {
+<<<<<<< HEAD
     padding: 12px 12px 12px 0;
     display: inline-block;
     color: #7685bb;
@@ -275,6 +302,16 @@ strong {
     font-size: 23px;
     font-weight: 500;
     /* text-shadow: 5px 5px #ecc7f9;*/
+=======
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: #7685bb;
+  /*color: #290037;*/
+  /*color: #3101f6;*/
+  font-size: 27px;
+  font-weight: 600;
+  /* text-shadow: 5px 5px #ecc7f9;*/
+>>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
 
 .add input[type="text"],
@@ -283,6 +320,7 @@ strong {
 .add input[type="password"],
 .add select,
 .add textarea {
+<<<<<<< HEAD
     float: right;
     width: 100%;
     padding: 5px;
@@ -295,14 +333,36 @@ strong {
     background: #7685bb42;
     border: 2px solid #7685bb42;
     /*background: #e1a4f69e;
+=======
+  float: right;
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  resize: vertical;
+  height: 55px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  background: #5a80b142;
+  border: 3px solid #7685bb42;
+  /*background: #e1a4f69e;
+>>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
   border: 2px solid #ecc7f9;*/
     /*    background: #afb1ed;
     border: 2px solid #c1afed;*/
+<<<<<<< HEAD
     color: #729cc0;
     /*color: #290037;*/
     font-size: 25px;
     font-weight: 900px;
     text-align: center;
+=======
+  color: #556f88;
+  /*color: #290037;*/
+  font-size: 33px;
+  font-weight:bold;
+  text-align: center;
+>>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
 .add input[type="submit"] {
     margin: 10px;
@@ -315,11 +375,19 @@ strong {
   border: 2px solid #290037;*/
     /*background: #3506f6;
     border: 2px solid #3506f6;*/
+<<<<<<< HEAD
     font-size: 22px;
     font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
     float: right;
+=======
+  font-size: 30px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+>>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
 .style-container {
     /* background-color: rgb(198, 29, 29);*/
@@ -343,6 +411,7 @@ strong {
 }
 
 @media (min-width: 0px) and (max-width: 650px) {
+<<<<<<< HEAD
     .add h1 {
         font-size: 25px;
     }
@@ -406,6 +475,71 @@ strong {
         padding-left: 100px;
         padding-right: 100px;
     }
+=======
+  .add h1 {
+    font-size: 25px;
+  }
+  .add label {
+    font-size: 15px;
+    margin-right: 15px;
+  }
+  .add input[type="text"],
+  .add input[type="email"],
+  .add input[type="date"],
+  .add input[type="password"],
+  .add select,
+  .add textarea {
+    float: left;
+    width: 60%;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  .add input[type="submit"] {
+    margin-right: 45%;
+    padding: 4px;
+    font-size: 20px;
+  }
+
+  .style-container {
+    /*background-color: rgb(198, 29, 29);*/
+    margin-bottom: 5%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 651px) and (max-width: 1000px) {
+  .add h1 {
+    font-size: 35px;
+    font-weight: 900;
+  }
+  .add label {
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  .add input[type="text"],
+  .add input[type="email"],
+  .add input[type="date"],
+  .add input[type="password"],
+  .add select,
+  .add textarea {
+    float: left;
+    width: 70%;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  .add input[type="submit"] {
+    margin-right: 45%;
+    padding: 8px;
+    font-size: 20px;
+  }
+
+  .style-container {
+    /* background-color: rgb(198, 29, 175);*/
+    margin-bottom: 5%;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+>>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
 @media (min-width: 992px) and (max-width: 1199px) {
     .add label {
@@ -481,6 +615,7 @@ strong {
   box-shadow: 2px 2px 2px #488fcb;
   height: 40px;
   font-size: 20px;
+<<<<<<< HEAD
   padding: 0px 50px;*/
     width: 20%;
     /* width: 32%; */
@@ -491,6 +626,10 @@ strong {
     height: 40px;
     font-size: 20px;
     padding: 0px 50px;
+=======
+  font-weight: bold;
+  padding: 0px 50px;
+>>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
 .search:focus {
     outline: 2px auto #488fcb;

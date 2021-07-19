@@ -28,7 +28,7 @@
           </div>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="{{route('stud.index')}}">الصفحة الرئيسية <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="{{(Auth::user()->role_id == 'student')?route('stud.index'):route('teach.main')}}">الصفحة الرئيسية <span class="sr-only">(current)</span></a>
         </li>
         <!--<li class="nav-item">
           <a class="nav-link" href="#"> الصفحة الرئيسية </a>
@@ -135,7 +135,7 @@
                                   
                                   <li class="out">
                                       <div class="chat-img">
-                                          <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                                          <img alt="Avtar" src="{{($comment->user->photo == null) ? url('/photos/ignore.jpg') : asset('storage/photos/'. $comment->user->photo)}}">
                                       </div>
                                       <div class="chat-body">
                                           <div class="chat-message">
@@ -177,7 +177,7 @@
                                   
                                           <li class="out">
                                               <div class="chat-img">
-                                                  <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar6.png">
+                                                  <img alt="Avtar" src="{{($reply->user->photo == null) ? url('/photos/ignore.jpg') : asset('storage/photos/'.$reply->user->photo)}}">
                                               </div>
                                               <div class="t chat-body ">
                                                   <div class="chat-message2">
@@ -288,12 +288,12 @@
           <div class="col-lg-4 col-12 proj-adver fixed">
               <div class="part2 text-right">
                 <div class="project-m adver">
-                  <h1 class="main-header"> <a href="{{route('stud.lectures',['id'=>$matrial->id])}}" class="" >  المحاضرات </a> </h1>
+                  <h1 class="main-header"> <a href="{{(Auth::user()->role_id == 'student')?route('stud.lectures',['id'=>$matrial->id]):'#'}}" class="" >  المحاضرات </a> </h1>
                   
                 </div>
                   
-                <div class="project-m adver">
-                  <h1 class="main-header"> <a href="{{route('stud.projects',['cat'=>$matrial->cat_name])}}" class="" > المشاريع </a> </h1>
+                <div class="project-m adver"> 
+                  <h1 class="main-header"> <a href="{{(Auth::user()->role_id == 'student')?route('stud.projects',['cat'=>$matrial->cat_name]):'#'}}" class="" > المشاريع </a> </h1>
                   <ul class="list-group text-right project-list" >
                     
                     @foreach ($projects as $project)
@@ -302,7 +302,7 @@
                   </ul>
                 </div>
                 <div class="advertisement adver">
-                  <h1 class="main-header"><a href="{{route('stud.advertisments',['cat'=>$matrial->cat_name])}}" class="" > الإعلانات </a></h1>
+                  <h1 class="main-header"><a href="{{(Auth::user()->role_id == 'student')?route('stud.advertisments',['cat'=>$matrial->cat_name]):'#'}}" class="" > الإعلانات </a></h1>
                    
                     <ul class="list-group text-right advertisting-list" >
                       @foreach ($advertisments as $item)

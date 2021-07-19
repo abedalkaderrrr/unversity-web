@@ -3,7 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Carbon\Carbon ;
+use Carbon\Carbon;
+
 class CreateAdvertismentsTable extends Migration
 {
     /**
@@ -23,7 +24,7 @@ class CreateAdvertismentsTable extends Migration
             $table->timestamp('period')->nullable()->default(Carbon::now()->addDays(7)->format('Y-m-d'));
             $table->integer('status')->unsigned()->nullable()->default(0);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-        
+
             $table->timestamps();
         });
     }
