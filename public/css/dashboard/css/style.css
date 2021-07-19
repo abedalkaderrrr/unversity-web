@@ -1,116 +1,116 @@
 body {
-  /*padding-top: 70px;*/
-  /* background: rgba(0, 0, 0, 0.075);
+    /*padding-top: 70px;*/
+    /* background: rgba(0, 0, 0, 0.075);
 
    background-image: linear-gradient(#f5f5f5, #f5f5f5, #321fdbc7);
   background-repeat: no-repeat;
   background-size: cover;*/
-  background: #f5f5f5;
+    background: #f5f5f5;
 }
 /*تنسيق الجدول المعتمد-بداية*/
 /*start tabel*/
 table {
-  width: 90%;
-  margin-top: 5px;
-  margin: auto;
+    width: 90%;
+    margin-top: 5px;
+    margin: auto;
 }
 .table {
-  width: 90%;
-  max-width: 100%;
-  margin-bottom: 20px;
+    width: 90%;
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 .header-part {
-  text-align: center;
-  font-size: 50px;
-  font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
 
-  /*color: #321fdb;*/
-  color: #488fcb;
-  /* text-shadow: +2px +2px 5px; */
+    /*color: #321fdb;*/
+    color: #488fcb;
+    /* text-shadow: +2px +2px 5px; */
 }
 
 .student-button {
-  margin: auto;
-  margin-top: 15px;
+    margin: auto;
+    margin-top: 15px;
 }
 .student-form {
-  float: right;
+    float: right;
 }
 .student-form select {
-  color: #729cc0;
-  background: white;
-  padding: 5px;
-  border: 2px solid #c4befa;
-  /*box-shadow: +5px +5px 8px;*/
+    color: #729cc0;
+    background: white;
+    padding: 5px;
+    border: 2px solid #c4befa;
+    /*box-shadow: +5px +5px 8px;*/
 }
 .student-form label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-  color: #488fcb;
-  font-size: 23px;
-  font-weight: 600;
-  /*text-shadow: 5px 5px 8px;*/
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #488fcb;
+    font-size: 23px;
+    font-weight: 600;
+    /*text-shadow: 5px 5px 8px;*/
 }
 
 thead td {
-  padding: 10px;
+    padding: 10px;
 }
 .name {
-  color: #787171;
+    color: #787171;
 }
 tbody {
-  /* background: white;*/
-  background: #fff;
-  font-size: 20px;
-  font-weight: 180px;
-  color: #729cc0;
+    /* background: white;*/
+    background: #fff;
+    font-size: 20px;
+    font-weight: 180px;
+    color: #729cc0;
 }
 
 td a {
-  text-decoration: none;
-  margin-right: 5px;
+    text-decoration: none;
+    margin-right: 5px;
 
-  padding: 4px;
+    padding: 4px;
 }
 thead {
-  /*background: #321fdb;*/
-  background: #488fcb;
-  color: #eff1f1;
-  font-size: 25px;
-  font-weight: 300px;
+    /*background: #321fdb;*/
+    background: #488fcb;
+    color: #eff1f1;
+    font-size: 25px;
+    font-weight: 300px;
 }
 tfoot {
-  background: #e6e5f3;
+    background: #e6e5f3;
 }
 /* إصلاحات خاصة بلجداوال(قاعات-أقسام_أساتذة)فقط */
 @media (min-width: 0px) and (max-width: 640px) {
-  .header-part {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  tbody {
-    font-size: 14px;
-    font-weight: 180px;
-  }
-  thead {
-    font-size: 15px;
-    font-weight: 300px;
-  }
-  .foot {
-    width: 45%;
-  }
-  .student-form label {
-    font-size: 15px;
-    font-weight: 300px;
-    margin-right: 8px;
-  }
+    .header-part {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    tbody {
+        font-size: 14px;
+        font-weight: 180px;
+    }
+    thead {
+        font-size: 15px;
+        font-weight: 300px;
+    }
+    .foot {
+        width: 45%;
+    }
+    .student-form label {
+        font-size: 15px;
+        font-weight: 300px;
+        margin-right: 8px;
+    }
 }
 .btn-danger {
-  background: #ff000094;
-  /*background: #ffff009e;*/
+    background: #ff000094;
+    /*background: #ffff009e;*/
 }
 .btn-success {
-  background: #008000a8;
+    background: #008000a8;
 }
 /*end tabel*/
 /*تنسيق الجدول المعتمد-نهاية*/
@@ -119,110 +119,110 @@ tfoot {
 /*start new sidebar*/
 /* reset */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 label {
-  cursor: pointer;
+    cursor: pointer;
 }
 &:focus {
-  outline: none;
+    outline: none;
 }
 
 .menu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #555;
-  width: 240px;
-  height: 100%;
-  transform: translate3d(-240px, 0, 0);
-  transition: transform 0.35s;
-  /* margin-top: 50px;*/
-  z-index: 1234567890;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #555;
+    width: 240px;
+    height: 100%;
+    transform: translate3d(-240px, 0, 0);
+    transition: transform 0.35s;
+    /* margin-top: 50px;*/
+    z-index: 1234567890;
 }
 
 label.menu-toggle {
-  position: absolute;
-  right: -60px;
-  width: 60px;
-  height: 60px;
-  line-height: 0px;
-  display: block;
-  padding: 0;
-  text-indent: -9999px;
-  background: #fff
-    url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png)
-    50% 50% / 25px 25px no-repeat;
-  margin-top: 6px;
+    position: absolute;
+    right: -60px;
+    width: 60px;
+    height: 60px;
+    line-height: 0px;
+    display: block;
+    padding: 0;
+    text-indent: -9999px;
+    background: #fff
+        url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png)
+        50% 50% / 25px 25px no-repeat;
+    margin-top: 6px;
 }
 
 ul li > label {
-  background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png)
-    95% 50% / 16px 16px no-repeat;
+    background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png)
+        95% 50% / 16px 16px no-repeat;
 }
 a,
 label {
-  /*display: block;
+    /*display: block;
         text-align: center;
         padding: 0 20px;
         line-height: 60px;
         text-decoration: none;
         color: #000*/
-  padding: 10px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  display: block;
-  /* text-shadow: 2px 2px 9px white; */
-  ~webkit-transition: font-size 0.5s ease;
-  ~moz-transition: font-size 0.5s ease;
-  ~o-transition: font-size 0.5s ease;
-  transition: font-size 0.5s ease;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    /* text-shadow: 2px 2px 9px white; */
+    ~webkit-transition: font-size 0.5s ease;
+    ~moz-transition: font-size 0.5s ease;
+    ~o-transition: font-size 0.5s ease;
+    transition: font-size 0.5s ease;
 }
 
 /* hide inputs */
 .menu-checkbox {
-  display: none;
+    display: none;
 }
 
 /* hide navigation icon for sublabels */
 .menu .menu label.menu-toggle {
-  background: none;
+    background: none;
 }
 
 /* fade in checked menu */
 .menu-checkbox:checked + .menu {
-  transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 /* for show */
 
 p {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 #info {
-  display: table;
-  background: rgba(0, 0, 0, 0.4);
-  height: 100%;
-  width: 100%;
+    display: table;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
 }
 #info-content {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 12px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
 }
 /*h1 {
   color: #fff;
@@ -236,17 +236,17 @@ p {
   display: inline-block;
 }*/
 strong {
-  display: block;
-  font-size: 26;
+    display: block;
+    font-size: 26;
 }
 .menu a:hover,
 .menu a:focus {
-  color: black;
-  font-size: 21px;
-  font-weight: 600;
-  /* text-shadow: 2px 2px 9px #222; */
-  /* box-shadow: 4px 4px 9px; */
-  text-decoration: none;
+    color: black;
+    font-size: 21px;
+    font-weight: 600;
+    /* text-shadow: 2px 2px 9px #222; */
+    /* box-shadow: 4px 4px 9px; */
+    text-decoration: none;
 }
 /*end new sidebar*/
 /*  الشريط الجانبي المعتمد -نهاية */
@@ -254,27 +254,27 @@ strong {
 /* تنسيق الفورمات المعتمد-بداية */
 /* start style forms*/
 .add h1 {
-  background: white;
-  color: #7685bb;
-  /*color: #290037;*/
-  /* color: #3100f6;*/
-  /*padding: 20px;*/
-  font-size: 45px;
-  font-weight: 900;
-  margin-bottom: 10px;
-  text-align: center;
-  margin: 30px;
+    background: white;
+    color: #7685bb;
+    /*color: #290037;*/
+    /* color: #3100f6;*/
+    /*padding: 20px;*/
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-align: center;
+    margin: 30px;
 }
 
 .add label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-  color: #7685bb;
-  /*color: #290037;*/
-  /*color: #3101f6;*/
-  font-size: 23px;
-  font-weight: 500;
-  /* text-shadow: 5px 5px #ecc7f9;*/
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    color: #7685bb;
+    /*color: #290037;*/
+    /*color: #3101f6;*/
+    font-size: 23px;
+    font-weight: 500;
+    /* text-shadow: 5px 5px #ecc7f9;*/
 }
 
 .add input[type="text"],
@@ -283,134 +283,134 @@ strong {
 .add input[type="password"],
 .add select,
 .add textarea {
-  float: right;
-  width: 100%;
-  padding: 5px;
-  border-radius: 4px;
-  resize: vertical;
-  height: 45px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  color: #729cc0;
-  background: #7685bb42;
-  border: 2px solid #7685bb42;
-  /*background: #e1a4f69e;
+    float: right;
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    resize: vertical;
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #729cc0;
+    background: #7685bb42;
+    border: 2px solid #7685bb42;
+    /*background: #e1a4f69e;
   border: 2px solid #ecc7f9;*/
-  /*    background: #afb1ed;
+    /*    background: #afb1ed;
     border: 2px solid #c1afed;*/
-  color: #729cc0;
-  /*color: #290037;*/
-  font-size: 25px;
-  font-weight: 900px;
-  text-align: center;
+    color: #729cc0;
+    /*color: #290037;*/
+    font-size: 25px;
+    font-weight: 900px;
+    text-align: center;
 }
 .add input[type="submit"] {
-  margin: 10px;
-  margin-right: 48%;
-  color: white;
-  padding: 10px;
-  background: #7685bb;
-  border: 2px solid #7685bb;
-  /*background: #290037;
+    margin: 10px;
+    margin-right: 48%;
+    color: white;
+    padding: 10px;
+    background: #7685bb;
+    border: 2px solid #7685bb;
+    /*background: #290037;
   border: 2px solid #290037;*/
-  /*background: #3506f6;
+    /*background: #3506f6;
     border: 2px solid #3506f6;*/
-  font-size: 22px;
-  font-weight: 700;
-  border-radius: 5px;
-  cursor: pointer;
-  float: right;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
 }
 .style-container {
-  /* background-color: rgb(198, 29, 29);*/
-  margin: auto;
-  margin-bottom: 5%;
-  padding-left: 200px;
-  padding-right: 200px;
+    /* background-color: rgb(198, 29, 29);*/
+    margin: auto;
+    margin-bottom: 5%;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 .tan {
-  background-color: white;
-  border-radius: 10px;
-  border: 3px 3px rgb(226, 224, 224);
-  padding-top: 5px;
-  border: 1px solid #ddd;
-  margin-top: 8%;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px 3px rgb(226, 224, 224);
+    padding-top: 5px;
+    border: 1px solid #ddd;
+    margin-top: 8%;
 }
 @media (min-width: 0px) and (max-width: 1200px) {
-  .tan {
-    margin-top: 15%;
-  }
+    .tan {
+        margin-top: 15%;
+    }
 }
 
 @media (min-width: 0px) and (max-width: 650px) {
-  .add h1 {
-    font-size: 25px;
-  }
-  .add label {
-    font-size: 15px;
-    margin-right: 15px;
-  }
-  .add input[type="text"],
-  .add input[type="email"],
-  .add input[type="date"],
-  .add input[type="password"],
-  .add select,
-  .add textarea {
-    float: left;
-    width: 60%;
-    margin-left: 20px;
-    font-size: 18px;
-  }
-  .add input[type="submit"] {
-    margin-right: 45%;
-    padding: 4px;
-    font-size: 13px;
-  }
+    .add h1 {
+        font-size: 25px;
+    }
+    .add label {
+        font-size: 15px;
+        margin-right: 15px;
+    }
+    .add input[type="text"],
+    .add input[type="email"],
+    .add input[type="date"],
+    .add input[type="password"],
+    .add select,
+    .add textarea {
+        float: left;
+        width: 60%;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    .add input[type="submit"] {
+        margin-right: 45%;
+        padding: 4px;
+        font-size: 13px;
+    }
 
-  .style-container {
-    /*background-color: rgb(198, 29, 29);*/
-    margin-bottom: 5%;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+    .style-container {
+        /*background-color: rgb(198, 29, 29);*/
+        margin-bottom: 5%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 @media (min-width: 651px) and (max-width: 1000px) {
-  .add h1 {
-    font-size: 35px;
-    font-weight: 900;
-  }
-  .add label {
-    font-size: 18px;
-    margin-right: 15px;
-  }
-  .add input[type="text"],
-  .add input[type="email"],
-  .add input[type="date"],
-  .add input[type="password"],
-  .add select,
-  .add textarea {
-    float: left;
-    width: 70%;
-    margin-left: 20px;
-    font-size: 18px;
-  }
-  .add input[type="submit"] {
-    margin-right: 45%;
-    padding: 8px;
-    font-size: 18px;
-  }
+    .add h1 {
+        font-size: 35px;
+        font-weight: 900;
+    }
+    .add label {
+        font-size: 18px;
+        margin-right: 15px;
+    }
+    .add input[type="text"],
+    .add input[type="email"],
+    .add input[type="date"],
+    .add input[type="password"],
+    .add select,
+    .add textarea {
+        float: left;
+        width: 70%;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    .add input[type="submit"] {
+        margin-right: 45%;
+        padding: 8px;
+        font-size: 18px;
+    }
 
-  .style-container {
-    /* background-color: rgb(198, 29, 175);*/
-    margin-bottom: 5%;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+    .style-container {
+        /* background-color: rgb(198, 29, 175);*/
+        margin-bottom: 5%;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .add label {
-    font-size: 20px;
-  }
+    .add label {
+        font-size: 20px;
+    }
 }
 /*end style form*/
 
@@ -418,75 +418,80 @@ strong {
 
 /* تنسيق الإحصائيات المعتمد-بداية */
 .num {
-  padding: 30px;
-  margin-right: 5px;
-  margin-bottom: 20px;
+    padding: 30px;
+    margin-right: 5px;
+    margin-bottom: 20px;
 }
 .num p {
-  color: white;
-  letter-spacing: 1px;
-  font-size: 25px;
-  font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: bold;
 }
 .num span {
-  color: white;
-  font-size: 22px;
-  font-weight: 1500px;
+    color: white;
+    font-size: 22px;
+    font-weight: 1500px;
 }
 /* تنسيق الإحصائيات المعتمد-نهاية */
 
 .adver {
-  background: white;
-  padding-right: 55px;
-  /*padding-left:55px   مالها داعي لأن السبان عاطيتها بادينغ بهاد المقدار  */
-  padding-top: 30px;
-  padding-bottom: 30px;
+    background: white;
+    padding-right: 55px;
+    /*padding-left:55px   مالها داعي لأن السبان عاطيتها بادينغ بهاد المقدار  */
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .adver h1 {
-  color: black;
-  /* color: #555; */
-  font-size: 35px;
-  font-weight: bold;
+    color: black;
+    /* color: #555; */
+    font-size: 35px;
+    font-weight: bold;
 }
 .adver h3 {
-  display: inline;
-  float: right;
-  padding-top: 10px;
-  color: black;
+    display: inline;
+    float: right;
+    padding-top: 10px;
+    color: black;
 }
 .adver span {
-  float: left;
-  padding: 35px 20px 5px;
-  padding-left: 55px;
+    float: left;
+    padding: 35px 20px 5px;
+    padding-left: 55px;
 }
 .adver span:hover {
-  color: #0d0d0d;
+    color: #0d0d0d;
 }
 /* تنسيق الإحصائيات المعتمد-نهاية */
 
 .tan-tabel {
-  background-color: white;
-  border-radius: 10px;
-  padding-top: 5px;
-  padding: 10px;
-  border: 2px solid #ddd;
-  margin-top: 1%;
-  padding-bottom: 2%;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    margin-top: 1%;
+    padding-bottom: 2%;
 }
 
-
-
-
-
 .search {
-  width: 80%;
+    /*width: 80%;
   margin: 30px auto;
   border: 1px solid #488fcb;
   box-shadow: 2px 2px 2px #488fcb;
   height: 40px;
   font-size: 20px;
-  padding: 0px 50px;
+  padding: 0px 50px;*/
+    width: 20%;
+    /* width: 32%; */
+    float: right;
+    margin: 30px 5% 30px auto;
+    border: 1px solid #488fcb;
+    box-shadow: 2px 2px 2px #488fcb;
+    height: 40px;
+    font-size: 20px;
+    padding: 0px 50px;
 }
 .search:focus {
-  outline: 2px auto #488fcb;
+    outline: 2px auto #488fcb;
 }

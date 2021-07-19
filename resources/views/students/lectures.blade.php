@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="lec" style="background:#e8a26608;">
+<div class="lec" style="background:#e8a26608; margin-top:-24px;">
     <!--start nav--> 
-    <nav class="navbar navbar-expand-lg navbar-light main-page-teacher">
+    <nav class="navbar navbar-expand-lg navbar-light main-page-teacher" style="background-color: white">
       <div class="container">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,13 +42,13 @@
       </nav>
     <!-- end nav-->
 
-    <div class=" container total"  style="    border: 1px solid crimson;     box-shadow: 2px 2px 6px crimson;" >
+    <div class=" container total" >
      <!-- start program-->
      <div class=" container project-main " >
          <div class="project part tan-tabel">
-           <h2 class="main-header-lecture text-right " style="color: crimson; text-shadow: 2px 2px 5px #e8a2666b;"> محاضرات مادة البرمجة </h2>         
+           <h2 class="main-header-lecture text-right " style="    color: #290037;    text-shadow: 2px 2px 5px #290037"> محاضرات مادة البرمجة </h2>         
            <table class="table text-center ">
-             <thead style="    background: crimson;color: white;">
+             <thead>
                  <tr>
                      <td style="width: 55%;margin-left: -20px; overflow: auto;" class="file">  الروابط الخاصة فيها </td>
                      <td > عنوان المحاضرة </td>

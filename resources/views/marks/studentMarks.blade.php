@@ -66,7 +66,7 @@
     </div>
     <!-- نهاية الترويسة -->
     <!-- بداية جدول العلامات -->
-    <div class="container-table">
+    <div class="container-table" >
         <table class="table text-center table-mark" >
             <thead>
                 <tr>

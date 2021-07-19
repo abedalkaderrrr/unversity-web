@@ -407,7 +407,7 @@
         <input class="text-right s-model search " id="myInput" type="text" placeholder="بحث" >     
 
        <div class="container text-center">
-        <div class="table-responsive"> 
+        <!--<div class="table-responsive">--> 
            <table class="table ">
                <thead>
                    <tr>
@@ -424,12 +424,12 @@
                   
                     @foreach ($student as $stud)
                     <tr>
-                      <td> <form style="display:inline" action="{{route('student.delete',['id' => $stud->id])}}" method="POST">
+                      <td> <form class="btn .btn" style="display:inline" action="{{route('student.delete',['id' => $stud->id])}}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger " title="Delete">Delete</button>
                     </form>
-                    <form style="display:inline" action="{{route('pageStudentEdit',['id' => $stud->id])}}" method="get">
+                    <form class="btn .btn .btn-danger" style="display:inline" action="{{route('pageStudentEdit',['id' => $stud->id])}}" method="get">
                       @csrf
                       <button class="btn btn-success " title="Delete">تعديل</button>
                   </form>
@@ -449,7 +449,7 @@
                      <a href="{{route('pageAddStudent',['cat'=>$catSelected ,'year'=>$yearSelected])}}" type="button" class="btn btn-primary foot"  style="margin-right :5px ;"> إضافة</a>
                      <a  type="button" href="{{route('export.students',['cat'=>$catSelected ,'year'=>$yearSelected])}}" class="btn btn-info foot "> تصدير </a>
 
-                     <form style="display: inline" action="{{route('import.students',['cat'=>$catSelected ,'year'=>$yearSelected])}}" method="POST" enctype="multipart/form-data">
+                     <form style="display: inline" class="btn" action="{{route('import.students',['cat'=>$catSelected ,'year'=>$yearSelected])}}" method="POST" enctype="multipart/form-data">
                       @csrf
                      <button type="submit"  class="btn btn-warning foot "> استيراد </button><input type="file" name="users"  ></form>
     
@@ -462,8 +462,8 @@
     
                </tfoot>               
            </table>
-          </div>
-        </div>
+          <!--</div>------------->
+        <!--</div>------------>
        </div>
   
        <!-- end tabel-->
