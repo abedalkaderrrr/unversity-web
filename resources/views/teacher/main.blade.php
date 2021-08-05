@@ -177,9 +177,9 @@
     </div>
 
 <!--end subject-->
-<div class="row">
-    <a  class="btn btn-secondary" href="{{route('search.room.get')}}"  style="margin-left: 10px">الاستعلام عن قاعة</a>
-    <a class="btn btn-success" href="{{route('search.teacher.get')}}" style="margin-left: 10px">الاستعلام عن دكتور</a>
+<div class="bord row " style = " border-bottom: 1px solid #290037a8; margin-left : 25px ;  margin-right : 25px ;">
+    <a style="background-color :#c4b1cba8;  border-color: #c4b1cba8 ; margin : 3%; margin-left : 10% ;  color: #290037; font-weight:bold ;"  class="btn btn-secondary" href="{{route('search.room.get')}}"  style="margin-left: 10px">الاستعلام عن قاعة</a>
+    <a style ="background-color: #290037a8; border-color: #290037a8 ; margin : 3% ;  " class="btn btn-success" href="{{route('search.teacher.get')}}" style="margin-left: 10px" >الاستعلام عن دكتور</a>
 </div>
 <!-- start program-->
     <div class=" container program-main">

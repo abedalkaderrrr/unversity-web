@@ -103,8 +103,8 @@
      /*color: #4938df;*/
      color: #488fcb;
      
-       font-size: 23px;
-       font-weight: bold;
+       font-size: 25px;
+       font-weight: bolder;
        transition: font-size 0.5s ease;
    }
    .navbar-inverse .navbar-nav > li > a:hover,
@@ -113,6 +113,20 @@
      color: #488fcb;
      font-size: 25px;
    }
+   .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+     /* color: #4938df;*/
+      color: #488fcb;
+      background : #e6e5f3;
+      font-size: 25px;
+    }
+    .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #488fcb;
+    background-color : #e6e5f3 ;
+    
+}
+  
    
    .sidebar {
      height: 100%;
@@ -132,6 +146,7 @@
      padding: 8px 8px 8px 32px;
      text-decoration: none;
      font-size: 25px;
+     font-weight: bolder ;
      color:  #488fcb;
      display: block;
      transition: 0.3s;
@@ -162,9 +177,9 @@
    
    }
    
-   .openbtn:hover {
+   /*.openbtn:hover {
      background-color:#919396;
-   }
+   }*/
    
    #main {
      transition: margin-left .5s;
@@ -254,7 +269,7 @@
    
          <div class="container text-center part tan-tabel">
            <h1 class="header-part"> الحجوزات </h1>
-           <input class="text-right s-model search " id="myInput" type="text" placeholder="بحث" >     
+           <input class="text-right s-model search " id="myInput" type="text" placeholder="...بحث" >     
 
                     
              <table class="table">

@@ -156,16 +156,24 @@
       /*color: #4938df;*/
       color: #488fcb;
       
-        font-size: 23px;
-        font-weight: bold;
+        font-size: 25px;
+        font-weight: bolder;
         transition: font-size 0.5s ease;
     }
     .navbar-inverse .navbar-nav > li > a:hover,
     .navbar-inverse .navbar-nav > li > a:focus {
      /* color: #4938df;*/
       color: #488fcb;
+      background : #e6e5f3;
       font-size: 25px;
     }
+    .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #488fcb;
+    background-color : #e6e5f3 ;
+    
+}
+    
     
     
     .sidebar {
@@ -189,6 +197,8 @@
       color:  #488fcb;
       display: block;
       transition: 0.3s;
+      font-weight: bolder;
+      
       
     }
     
@@ -217,9 +227,9 @@
     
     }
     
-    .openbtn:hover {
+    /*.openbtn:hover {
       background-color:#919396;
-    }
+    }*/
     
     #main {
       transition: margin-left .5s;
@@ -318,7 +328,7 @@
         
          <div class="container text-center part tan-tabel">
           <h1 class="header-part"> الإعلانات</h1>
-          <input class="text-right s-model search " id="myInput" type="text" placeholder="بحث" >       
+          <input class="text-right s-model search " id="myInput" type="text" placeholder="...بحث" >       
              <table class="table">
                  <thead>
                      <tr>
@@ -356,7 +366,6 @@
                      <td>
                       <a href="{{route('advertisment.add')}}" type="button" class="btn btn-primary foot"  style="margin-right :5px ;"> إضافة</a>
                      </td>
-                     <td></td>
                      <td></td>
                      <td></td>
                      <td></td>

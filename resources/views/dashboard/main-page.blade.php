@@ -48,6 +48,7 @@
      font-size: 25px;
      padding-top: 25px;
      transition: font-size 0.5s ease;
+     font-weight: 700;
  }
  
  .navbar-inverse .navbar-nav > li > a:hover,
@@ -86,6 +87,12 @@
  }  */
  
  /* start nav */
+ .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #488fcb;
+    background-color : #969595;
+    
+}
  
  
  body {
@@ -113,6 +120,7 @@
    color: #fff;
    display: block;
    transition: 0.3s;
+   font-weight: 800;
    
  }
  
@@ -151,9 +159,9 @@
    }
  }
  
- .openbtn:hover {
+ /*.openbtn:hover {
    background-color: #444;
- }
+ }*/
  
  #main {
    transition: margin-left .5s;

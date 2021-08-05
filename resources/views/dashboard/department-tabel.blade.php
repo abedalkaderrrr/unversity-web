@@ -49,8 +49,8 @@
   .navbar-inverse .navbar-nav > li > a{
       /*color: #4938df;*/
       color: #488fcb;
-      font-size: 23px;
-      font-weight: bold;
+      font-size: 25px;
+      font-weight: bolder;
       transition: font-size 0.5s ease;
     }
   
@@ -60,6 +60,20 @@
       color: #488fcb;
       font-size: 25px;
     }
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+     /* color: #4938df;*/
+      color: #488fcb;
+      background : #e6e5f3;
+      font-size: 25px;
+    }
+    .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #488fcb;
+    background-color : #e6e5f3 ;
+    
+}
+  
    
   
   .sidebar {
@@ -80,6 +94,7 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
+    font-weight: bolder;
     color:  #488fcb;
     display: block;
     transition: 0.3s;
@@ -110,9 +125,9 @@
   
   }
   
-  .openbtn:hover {
+  /*.openbtn:hover {
     background-color:#919396;
-  }
+  }*/
   .alert {
       text-align: right;
     font-size: 18px;
@@ -220,7 +235,7 @@
   
       <div class="container text-center part tan-tabel">
           <h1 class="header-part"> الأقسام</h1> 
-          <input class="text-right s-model search " id="myInput" type="text" placeholder="بحث" >     
+          <input class="text-right s-model search " id="myInput" type="text" placeholder="...بحث" >     
         
           <table class="table">
               <thead>
@@ -240,7 +255,7 @@
                       <form style="display:inline" action="{{route('category.delete',['id' => $category->id])}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-danger " title="Delete">Delete</button>
+                        <button class="btn btn-danger " title="Delete">حذف</button>
                     </form>
 
                       <a href="{{route('categoryPageEdit',['id'=>$category->id])}}" type="button" class="btn btn-success "> تعديل </a>

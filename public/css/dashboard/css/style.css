@@ -22,7 +22,7 @@ table {
 .header-part {
     text-align: center;
     font-size: 50px;
-    font-weight: bold;
+    font-weight: bolder;
 
     /*color: #321fdb;*/
     color: #488fcb;
@@ -64,9 +64,10 @@ table {
   padding: 12px 12px 12px 0;
   display: inline-block;
   color: #488fcb;
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 800;
   /*text-shadow: 5px 5px 8px;*/
+  border: none ;
 >>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
 
@@ -91,6 +92,10 @@ tbody {
   color: #729cc0;
 >>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
+tbody{
+    font-size: 21px;
+    font-weight: 800;
+}
 
 td a {
     text-decoration: none;
@@ -103,11 +108,19 @@ thead {
     background: #488fcb;
     color: #eff1f1;
     font-size: 25px;
-    font-weight: 300px;
+    font-size: 23px;
+
+    font-weight: bolder;
 }
 tfoot {
     background: #e6e5f3;
 }
+
+
+
+
+
+
 /* إصلاحات خاصة بلجداوال(قاعات-أقسام_أساتذة)فقط */
 @media (min-width: 0px) and (max-width: 640px) {
     .header-part {
@@ -286,7 +299,7 @@ strong {
     /* color: #3100f6;*/
     /*padding: 20px;*/
     font-size: 45px;
-    font-weight: 900;
+    font-weight: bolder;
     margin-bottom: 10px;
     text-align: center;
     margin: 30px;
@@ -312,6 +325,9 @@ strong {
   font-weight: 600;
   /* text-shadow: 5px 5px #ecc7f9;*/
 >>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
+}
+.add label{
+    font-weight: bolder;
 }
 
 .add input[type="text"],
@@ -359,8 +375,8 @@ strong {
 =======
   color: #556f88;
   /*color: #290037;*/
-  font-size: 33px;
-  font-weight:bold;
+  font-size: 30px;
+  font-weight:bolder;
   text-align: center;
 >>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
@@ -560,12 +576,12 @@ strong {
     color: white;
     letter-spacing: 1px;
     font-size: 25px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 .num span {
     color: white;
     font-size: 22px;
-    font-weight: 1500px;
+    font-weight: 800;
 }
 /* تنسيق الإحصائيات المعتمد-نهاية */
 
@@ -580,18 +596,20 @@ strong {
     color: black;
     /* color: #555; */
     font-size: 35px;
-    font-weight: bold;
+    font-weight: bolder;
 }
 .adver h3 {
     display: inline;
     float: right;
     padding-top: 10px;
     color: black;
+    font-weight: 800;
 }
 .adver span {
     float: left;
     padding: 35px 20px 5px;
     padding-left: 55px;
+    color: black ;
 }
 .adver span:hover {
     color: #0d0d0d;

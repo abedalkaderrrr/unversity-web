@@ -184,8 +184,8 @@
     /*color: #4938df;*/
     color: #488fcb;
     
-      font-size: 23px;
-      font-weight: bold;
+      font-size: 25px;
+      font-weight: bolder;
       transition: font-size 0.5s ease;
   }
   .navbar-inverse .navbar-nav > li > a:hover,
@@ -194,6 +194,20 @@
     color: #488fcb;
     font-size: 25px;
   }
+  .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+     /* color: #4938df;*/
+      color: #488fcb;
+      background : #e6e5f3;
+      font-size: 25px;
+    }
+    .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #488fcb;
+    background-color : #e6e5f3 ;
+    
+}
+  
   
   
   
@@ -215,6 +229,8 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
+    
+    font-weight: bolder;
     color:  #488fcb;
     display: block;
     transition: 0.3s;
@@ -230,6 +246,7 @@
     top: 10;
     right: 25px;
     font-size: 36px;
+    font-weight: bolder;
     margin-left: 50px;
   }
   
@@ -245,9 +262,9 @@
   
   }
   
-  .openbtn:hover {
+  /*.openbtn:hover {
     background-color:#919396;
-  }
+  }*/
   
   #main {
     transition: margin-left .5s;
@@ -404,7 +421,7 @@
          </div>
         </form>
         <div class="container text-center">
-        <input class="text-right s-model search " id="myInput" type="text" placeholder="بحث" >     
+        <input class="text-right s-model search " id="myInput" type="text" placeholder="...بحث" >     
 
        <div class="container text-center">
         <!--<div class="table-responsive">--> 
@@ -427,7 +444,7 @@
                       <td> <form class="btn .btn" style="display:inline" action="{{route('student.delete',['id' => $stud->id])}}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-danger " title="Delete">Delete</button>
+                        <button class="btn btn-danger " title="Delete">حذف</button>
                     </form>
                     <form class="btn .btn .btn-danger" style="display:inline" action="{{route('pageStudentEdit',['id' => $stud->id])}}" method="get">
                       @csrf
@@ -447,11 +464,11 @@
                  <tr>
                    <td>
                      <a href="{{route('pageAddStudent',['cat'=>$catSelected ,'year'=>$yearSelected])}}" type="button" class="btn btn-primary foot"  style="margin-right :5px ;"> إضافة</a>
-                     <a  type="button" href="{{route('export.students',['cat'=>$catSelected ,'year'=>$yearSelected])}}" class="btn btn-info foot "> تصدير </a>
+                     <a style="margin-left: 15px;" type="button" href="{{route('export.students',['cat'=>$catSelected ,'year'=>$yearSelected])}}" class="btn btn-info foot "> تصدير </a>
 
                      <form style="display: inline" class="btn" action="{{route('import.students',['cat'=>$catSelected ,'year'=>$yearSelected])}}" method="POST" enctype="multipart/form-data">
                       @csrf
-                     <button type="submit"  class="btn btn-warning foot "> استيراد </button><input type="file" name="users"  ></form>
+                     <button type="submit"  class="btn btn-warning foot "> استيراد </button><input style="display: inline;width: 96px; margin-left: 5px;margin-top: 15px;" type="file" name="users"  ></form>
     
                    </td>
                    <td></td>

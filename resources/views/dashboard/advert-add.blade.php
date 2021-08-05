@@ -48,8 +48,10 @@
     
     .navbar-inverse .navbar-nav > li > a{
         color:  #f6dcff;
-        font-size: 23px;
+        color : #ffffff ;
+        font-size: 25px;
         transition: font-size 0.5s ease;
+        font-weight: bolder ;
     }
     
     .navbar-inverse .navbar-nav > li > a:hover,
@@ -57,6 +59,11 @@
       color: white;
       font-size: 25px;
     }
+    .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #7685bb;
+    
+ }
     
     
     
@@ -82,6 +89,7 @@
       color:  #ffffff;
       display: block;
       transition: 0.3s;
+      font-weight : bolder ;
       
     }
     
@@ -109,9 +117,9 @@
     
     }
     
-    .openbtn:hover {
+    /*.openbtn:hover {
       background-color:#b3b5b9;
-    }
+    }*/
     
     #main {
       transition: margin-left .5s;

@@ -99,6 +99,11 @@
     padding: 9px;
     color: black;
   }
+  .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #7685bb;
+    
+ }
   
   /*.navbar-inverse .navbar-nav > li > a:focus{
     color:#321fdb;
@@ -162,9 +167,9 @@
   
   }
   
-  .openbtn:hover {
+  /*.openbtn:hover {
     background-color:#b3b5b9;
-  }
+  }*/
   
   #main {
     transition: margin-left .5s;

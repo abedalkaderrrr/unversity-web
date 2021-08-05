@@ -63,6 +63,11 @@
      font-size: 25px;
    
    }
+   .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #7685bb;
+    
+ }
    
    
    .sidebar {
@@ -113,9 +118,9 @@
    
    }
    
-   .openbtn:hover {
+   /*.openbtn:hover {
      background-color:#919396;
-   }
+   }*/
    
    #main {
      transition: margin-left .5s;

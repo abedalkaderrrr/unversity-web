@@ -75,7 +75,7 @@
         <a type="button" class="btn btn-success btn-proj-adver" data-toggle="modal" data-target="#exampleModal4" data-whatever="{{$item->content}}" data-title="{{$item->title}}" data-id="{{$item->id}}" data-date="{{$item->date}}" style=" border-radius: 4px;">تعديل </a>
        <form action="{{route('download.projects',['id'=>$item->id])}}" method="GET">
         @csrf
-        <button type="submit" class="btn btn-secondary btn-proj-adver" style="border-radius: 4px;"> تحميل </button>
+        <button type="submit" class="btn btn-secondary btn-proj-adver" style="border-radius: 4px; background: #428bca; border  #428bca;"> تحميل </button>
       </form>
         
       </div>
@@ -90,7 +90,7 @@
   </ul>
   <br>
 
-  <a type="button" class="btn btn-success btn-add btn-proj-adver" data-toggle="modal" data-target="#exampleModal" data-whatever="" > اضافة</a>
+  <a style=" background: #290037a8; border: #290037a8;  " type="button" class="btn btn-success btn-add btn-proj-adver" data-toggle="modal" data-target="#exampleModal" data-whatever="" > اضافة</a>
 
 </div>
 
@@ -125,7 +125,7 @@
   </ul>
   <br>
 
-  <a type="button" class="btn btn-success btn-add  btn-proj-adver" data-toggle="modal" data-target="#exampleModal2" data-whatever=""  > اضافة</a>
+  <a style=" background: #290037a8; border: #290037a8;  " type="button" class="btn btn-success btn-add  btn-proj-adver" data-toggle="modal" data-target="#exampleModal2" data-whatever=""  > اضافة</a>
 
 </div>
  
