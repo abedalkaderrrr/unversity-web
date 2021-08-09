@@ -47,7 +47,9 @@
  
  .navbar-inverse .navbar-nav > li > a{
      color:  #f6dcff;
-     font-size: 23px;
+     font-size: 25px;
+     
+     font-weight : bolder ;
      transition: font-size 0.5s ease;
  }
  .navbar-inverse .navbar-nav > li > a:hover,
@@ -137,6 +139,8 @@
    text-decoration: none;
    font-size: 25px;
    color:  #ffffff;
+   
+   font-weight : bolder ;
    display: block;
    transition: 0.3s;
    

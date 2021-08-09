@@ -84,7 +84,8 @@ body {
 }
 .navbar-light .navbar-nav .nav-link {
     color: rgb(54 16 67);
-    font-size: 22px;
+    font-size: 25px;
+    font-weight : bolder ;
     padding: 12px;
 =======
   margin-bottom: 30px;
@@ -99,7 +100,10 @@ body {
   padding: 16px;
 >>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
 }
-
+.dropdown-item {
+    font-weight: 600;
+    font-size: 22px;
+}
 .navbar-light .navbar-nav .show > .nav-link,
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
@@ -125,7 +129,7 @@ body {
 <<<<<<< HEAD
     color: #290037;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: bolder;
     text-shadow: 2px 2px 5px #290037;
     padding: 10px 20px;
 }
@@ -245,14 +249,19 @@ body {
 .program thead {
     background: #c4b1cba8;
     color: #290037;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 23px;
+    font-weight: bolder;
+}
+.table th, .table td {
+    font-size: 20px;
+    font-weight: bolder;
 }
 .program tbody {
 <<<<<<< HEAD
     /* background: white; */
     background: #faedff;
-    font-size: 20px;
+    font-size: 23px;
+    font-weight: bolder;
     font-weight: 180px;
     color: #290037;
 }
@@ -625,6 +634,7 @@ body {
     height: 100px;
     padding-top: 4%;
     font-size: 30px;
+    font-weight: bolder;
     margin-bottom: 8px;
 }
 .project2 {
@@ -638,13 +648,13 @@ body {
 <<<<<<< HEAD
     color: #290037;
     font-size: 35px;
-    font-weight: bold;
+    font-weight: bolder;
     text-shadow: 2px 2px 5px #290037;
     padding: 10px 20px;
 =======
   color: #290037;
   font-size: 35px;
-  font-weight: bold;
+  font-weight: bolder;
   text-shadow: 2px 2px 5px #ccc6ce;
   padding: 10px 20px;
 >>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
@@ -652,7 +662,7 @@ body {
 .projects,
 .advert {
     font-size: 27px;
-    font-weight: bold;
+    font-weight:bolder;
     color: #290037;
 }
 .btn-add {
@@ -689,7 +699,7 @@ body {
 .nav-m h2 {
     font-size: 2rem;
     color: #290037;
-    font-weight: bold;
+    font-weight: bolder;
 }
 .to {
     /*background-color: white*/
@@ -710,12 +720,16 @@ body {
     /*transition: font-size 0.5s ease;*/
     transition: color 0.5s ease;
 =======
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 23px;
+  font-weight: bolder;
   color: #290037;
   /*transition: font-size 0.5s ease;*/
   transition: color 0.5s ease;
 >>>>>>> cb9c48d2b916086db40292becfb377a7f350e8db
+}
+.adver span {
+    font-size: 23px;
+
 }
 
 .adver a {
@@ -730,8 +744,8 @@ body {
     color: #29003759;
 }
 .secandry-header {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 23px;
+    font-weight: bolder;
     color: #290037;
     /*font-size: 35px;*/
     /*text-shadow: 1px 1px 5px #290037a8;*/
@@ -767,9 +781,9 @@ body {
 }
 .advertisting-list .list-group-item p {
     color: #290037;
-    font-size: 23px;
+    font-size: 25px;
     text-align: right;
-    font-weight: 500;
+    font-weight: bolder;
 }
 /* الإصلاح الخاص بلغريد ليصير شكلو مقبول بس وقت طبقو عم ينتزع زر التعليقات */
 /*@media (min-width: 1200px){
@@ -836,9 +850,9 @@ body {
 
 .description {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
     text-align: right;
-    font-weight: 300;
+    font-weight: 400;
     color: #290037 !important;
     text-decoration: none;
 }
@@ -852,7 +866,8 @@ body {
 }
 .post-contanier p {
     color: #290037;
-    font-size: 22px;
+    font-size: 24px;
+    font-weight:bold;
     text-align: right;
 }
 /*p.conten-c {
@@ -1342,8 +1357,8 @@ body {
 /*جديد*/
 .btn-link {
     color: #290037;
-    /*font-size: 22px;*/
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: bolder;
     text-decoration: none;
     transition: font-size 0.5s ease;
 }
@@ -1351,7 +1366,7 @@ body {
 .btn-link:focus {
     color: #290037;
     font-size: 23px;
-    font-weight: 600;
+    font-weight: bolder;
     text-decoration: none;
 }
 .btn-link:focus {
@@ -1371,8 +1386,8 @@ body {
 }
 .form-lracture .point label {
     color: #290037;
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bolder;
     margin-right: 10%;
 }
 .form-lracture .point input {
@@ -1381,6 +1396,9 @@ body {
     width: 80%;
     margin-left: auto;
     margin-right: 1%;
+    font-size: 18px;
+    font-weight: bold;
+    direction: rtl;
 }
 @media (min-width: 0px) and (max-width: 600px) {
     .form-lracture .point label {

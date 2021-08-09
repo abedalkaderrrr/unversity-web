@@ -2,7 +2,7 @@
 
 @section('content')
 <!--start nav-->
-<nav class="navbar navbar-expand-lg navbar-light main-page-teacher">
+<nav class="navbar navbar-expand-lg navbar-light main-page-teacher" style =" ma ">
   <div class="container">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,7 +101,7 @@
                             </div>
                             <div class="row point">
                               <div class="col-9">
-                                <select type="text" id="conten" name="matrial" placeholder="conten.." class=" form-control  ss-model" style="border: 2px solid #2900378a; box-shadow: 2px 2px 5px #2900378a;width: 80%;margin-left: auto;margin-right: 1%;">
+                                <select type="text" id="conten" name="matrial" placeholder="conten.." class=" form-control  ss-model" style="font-size: 18px; direction: rtl;font-weight: bold;border: 2px solid #2900378a; box-shadow: 2px 2px 5px #2900378a;width: 80%;margin-left: auto;margin-right: 1%;">
                                   @foreach ($matrials as $matrial)
                                       <option value="{{$matrial->id}}">{{$matrial->name}}</option>
                                   @endforeach
@@ -178,8 +178,8 @@
 
 <!--end subject-->
 <div class="bord row " style = " border-bottom: 1px solid #290037a8; margin-left : 25px ;  margin-right : 25px ;">
-    <a style="background-color :#c4b1cba8;  border-color: #c4b1cba8 ; margin : 3%; margin-left : 10% ;  color: #290037; font-weight:bold ;"  class="btn btn-secondary" href="{{route('search.room.get')}}"  style="margin-left: 10px">الاستعلام عن قاعة</a>
-    <a style ="background-color: #290037a8; border-color: #290037a8 ; margin : 3% ;  " class="btn btn-success" href="{{route('search.teacher.get')}}" style="margin-left: 10px" >الاستعلام عن دكتور</a>
+    <a style="background-color :#c4b1cba8;  border-color: #c4b1cba8 ; margin : 3%; margin-left : 10% ;  color: #290037; font-weight: bolder ; font-size: 21px;"  class="btn btn-secondary" href="{{route('search.room.get')}}"  style="margin-left: 10px">الاستعلام عن قاعة</a>
+    <a style ="background-color: #290037a8; border-color: #290037a8 ; margin : 3% ;font-weight: bolder; font-size: 20px;  " class="btn btn-success" href="{{route('search.teacher.get')}}" style="margin-left: 10px" >الاستعلام عن دكتور</a>
 </div>
 <!-- start program-->
     <div class=" container program-main">

@@ -52,7 +52,8 @@
      /*color: #4938df;*/
      color: #488fcb;
      
-       font-size: 23px;
+       font-size: 25px;
+      font-weight : bolder ;
        font-weight: bold;
        transition: font-size 0.5s ease;
    }
@@ -88,6 +89,7 @@
      padding: 8px 8px 8px 32px;
      text-decoration: none;
      font-size: 25px;
+      font-weight : bolder ;
      color:  #488fcb;
      display: block;
      transition: 0.3s;

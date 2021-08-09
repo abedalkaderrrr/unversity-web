@@ -49,7 +49,7 @@
         <!-- start-nav  -->
         <div class="row nav-m ">
           <div class="col-6">
-            <div class="d-flex justify-content-start"> <a type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal2" data-whatever="@getbootstrap" style="margin: 10px; border-radius: 4px;" > نشر </a></div>
+            <div class="d-flex justify-content-start"> <a type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal2" data-whatever="@getbootstrap" style="margin: 10px; border-radius: 4px;font-weight : bolder;" > نشر </a></div>
 
 
           </div>
@@ -68,7 +68,7 @@
               <div class="row">
                 <div class="col">
                   <!--<h1 class="main-header text-right group2"  >  <a href="mark.html"> منشوراتي </a> </h1>-->
-                  <button class="btn btn-secondary">  <a href="{{route('stud.myposts')}}" style="color: white ; text-decoration: none;"> منشوراتي </a>  </button>
+                  <button class="btn btn-secondary">  <a href="{{route('stud.myposts')}}" style="color: white ;font-weight:bolder; text-decoration: none;"> منشوراتي </a>  </button>
 
                 </div>
                 <div class="col">
